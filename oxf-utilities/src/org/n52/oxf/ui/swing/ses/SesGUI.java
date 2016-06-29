@@ -110,7 +110,8 @@ public class SesGUI extends JDialog {
 			owner.getX();
 			jDialog = new JDialog();
 			jDialog.setSize(new Dimension(600, 500));
-			jDialog.setTitle("家庭智能安防事件订阅");
+			//jDialog.setTitle("家庭智能安防事件订阅");
+			jDialog.setTitle("年报信息事件订阅");
 			jDialog.setResizable(false);
 			
 			//Center dialog
@@ -345,7 +346,7 @@ public class SesGUI extends JDialog {
 	 */
 	public JComboBox getJComboBoxobservedProperty() {  //修改了
 		if (jComboBoxobservedProperty == null) {
-			String[] observedProperty = new String[]{"temperature"};
+			String[] observedProperty = new String[]{"temperature","甘肃电投"};
 			jComboBoxobservedProperty=new JComboBox(observedProperty); 
 			jComboBoxobservedProperty.setEditable(true);
 			jComboBoxobservedProperty.setBounds(new Rectangle(80, 20, 160, 20));

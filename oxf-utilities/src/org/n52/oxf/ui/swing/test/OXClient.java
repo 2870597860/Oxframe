@@ -94,7 +94,8 @@ public class OXClient extends JFrame {
     protected OptionsMenu optionsMenu;
 
     public OXClient() {
-        super("智能安防事件监测");
+        //super("智能安防事件监测");
+    	super("企业年报事件监测");
 
         oxf = new OX_Framework();
 

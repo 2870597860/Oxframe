@@ -39,8 +39,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import net.opengis.om.x10.ObservationDocument;
@@ -79,10 +83,15 @@ import com.vividsolutions.jts.geom.GeometryFactory;
 
 /**
  * @author Artur Osmanov <artur.osmanov@uni-muenster.de>, Thomas Everding
- * 
+ * xiaodai自己extendsJFrame
  */
-public class SesLayerAdder implements HttpHandler{
+public class SesLayerAdder extends JFrame implements HttpHandler{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private FeatureServiceLayer	layer	= null;
 	private OXFFeatureType		fType	= null;
 	private Component			owner	= null;
@@ -259,6 +268,31 @@ public class SesLayerAdder implements HttpHandler{
 	 * @param paramCon
 	 */
 	private void refreshNotificationsLayer(ParameterContainer paramCon){
+		String companyName=null;
+		String locationName=null;
+		String companyMessage="sensor公司的中文简称甘肃电投,概述2014年，公司董事会按照法律法规的规定，以及证监会、" +"\n"+
+							  "甘肃证监局、深圳证券交易所的监管要求，健全和完善公司各项制度，提升公司治理水平，全体" +"\n"+
+				              "董事勤勉忠实履行职责，董事会依法合规运作，科学决策能力和经营能力不断提高。报告期内，" +"\n"+
+				              "董事会贯彻落实公司发展战略，积极推动再融资工作，非公开发行A股股票已获得证监会正式受" +"\n"+
+				              "理；沉着应对困难和挑战，努力提升公司经营业绩，橙子沟电站建成并顺利投产。1、沉着应对" +"\n"+
+				              "困难挑战，努力提升公司经营业绩，项目建设稳步推进。着力推进电站水库调度，不断优化机" +"\n"+
+				              "CDM（清洁发展机制）减排指标收入降低，洮河、白龙江流域来水量与上年同期相比偏枯等减利" +"\n"+
+				              "因素带来的经营困难，及时研究采取了一系列止滑、减亏、稳升的措施和办法。各电站积极优化" +"\n"+
+				              "调度，重点推进经济运行工作，及时跟进小水电简易征收政策，降低增值税税费，有效提高了企" +"\n"+
+				              "业经营业绩。本报告期，公司控股子公司所属电站实现发电量62.41亿千瓦时，实现营业收入" +"\n"+
+				              "14.67亿元，归属于上市公司股东的净利润1.98亿元，同比减少39.53%。稳步推进项目建设工作，" +"\n"+
+				              "橙子沟电站建成并投产。各在建项目公司紧紧围绕“安全管控、质量管理、投资控制、工程进度" +"\n"+
+				              "”四条主线，切实加强组织管理，及时优化设计方案，严格强化防汛措施，各在建项目有序推进，"+"\n"+
+				              "橙子沟电站建成并顺利投产，公司投产装机规模和资产规模逐步提升。报告期末，公司总资产为" +"\n"+
+				              "136.21亿元，比上年同期增加3.35%，公司已发电权益装机容量达到176.47万千瓦，比上年增长" +"\n"+
+				              "6.97%。2、积极推动非公开发行A股股票工作，布局新能源发电领域。2014年，为增强公司实力，" +"\n"+
+				              "拓展主营业务范围，进一步提高公司的盈利能力、抗风险能力，公司适时启动了非公开发行股票" +"\n"+
+				              "工作，募集资金21.8亿元，主要用途包括：收购公司控股股东旗下的新能源资产，投资建设新能" +"\n"+
+				              "源项目，以及补充公司流动资金。报告期内，募集资金的申请材料经董事会审议通过后，已经省" +"\n"+
+				              "国资委、公司股东大会审批后报至证监会核准。3、注重股东回报，制定未来三年股东回报规划。" +"\n"+
+				              "为积极回报投资者，根据证监会《上市公司监管指引第3号——上市公司现金分红》和甘肃证监局" +"\n"+
+				              "《关于上市公司现金分红有关问题的通知》的规定，考虑公司所处行业的特点、发展阶段、经营" +"\n"+
+				              "模式、盈利水平";
 		OXFFeatureCollection set = layer.getFeatureCollection();
          
 		Random random = new Random();
@@ -280,23 +314,27 @@ public class SesLayerAdder implements HttpHandler{
 			feature.setGeometry(point2);
 		}
 		if(paramCon.containsParameterShellWithCommonName(FOI_ID)){
-			String locationName = (String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue();
+			 locationName = (String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue();
 			feature.setAttribute(FOI_ID, locationName);
 			 
 		}
 		//*下面是添加的
 		if(paramCon.containsParameterShellWithCommonName(sensorID)){
-			String locationName = (String)paramCon.getParameterShellWithCommonName(sensorID).getSpecifiedValue();
+			 locationName = (String)paramCon.getParameterShellWithCommonName(sensorID).getSpecifiedValue();
 			feature.setAttribute(sensorID, locationName);
 			 
 		}
 		//上面是添加的
 		if(paramCon.containsParameterShellWithCommonName(RESULT_VALUE)){
 			String resultValue = (String)paramCon.getParameterShellWithCommonName(RESULT_VALUE).getSpecifiedValue();
+			
 			feature.setAttribute(RESULT_VALUE, resultValue);
+			
 		}
 		if(paramCon.containsParameterShellWithCommonName(OBSERVED_PROPERTY)){
+			
 			String resultType = (String)paramCon.getParameterShellWithCommonName(OBSERVED_PROPERTY).getSpecifiedValue();
+			companyName=resultType;
 			feature.setAttribute(OBSERVED_PROPERTY, resultType);
 		}
 		if(paramCon.containsParameterShellWithCommonName(SAMPLING_TIME)){
@@ -307,7 +345,18 @@ public class SesLayerAdder implements HttpHandler{
 		//播放报警声音
 		 SoundHelper.PlaySound();
 		//弹出窗口显示传感器异常
-		JOptionPane.showMessageDialog(null,(String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue()+"Fire Alarm","报警消息",JOptionPane.WARNING_MESSAGE);
+		 //xiaodai自己添加的
+		 if(companyName.equals("甘肃电投")){
+			 //JTextField txtResult = new JTextField(companyName+"相关消息");
+			 //txtResult.setText(companyName);
+			 JTextArea jta=new JTextArea(10, 50);
+			 JScrollPane jsp=new JScrollPane(jta);
+			 jta.setText(companyName+"信息：\n"+companyMessage);
+			 JOptionPane.showMessageDialog(null,jsp,locationName+"信息",JOptionPane.INFORMATION_MESSAGE);
+			 setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+			 
+		 }
+		//JOptionPane.showMessageDialog(null,(String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue()+"Fire Alarm","报警消息",JOptionPane.WARNING_MESSAGE);
 		//播放报警声音
 		 //SoundHelper.PlaySound();
 

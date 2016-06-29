@@ -87,7 +87,9 @@ public class OMParser {
 		// observedProperty
 		PhenomenonPropertyType phType = observation.getObservedProperty();
 		paramCon.addParameterShell(SesLayerAdder.OBSERVED_PROPERTY, phType.getHref());
-		
+		//xiaodai自己添加的
+		String companyName=phType.getHref();
+		System.out.println("=========="+companyName);
 		// samplingTime
 		ITime time = null;
 		if (observation.getSamplingTime().getTimeObject() != null) {
