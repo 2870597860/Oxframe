@@ -28,6 +28,9 @@ package org.n52.oxf.ui.swing.ses;
 import sun.audio.*;
 import java.awt.Component;
 import java.awt.Point;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -234,6 +237,7 @@ public class SesLayerAdder extends JFrame implements HttpHandler{
 				System.out.println(a);
 				ParameterContainer paramCon = OMParser.parseOM(doc);  //进行到这里列出了返回通知的参数列表
 				refreshNotificationsLayer(paramCon);
+				
 			}
 			else if(level.equals("Filter Level 3")){
 				
@@ -260,6 +264,7 @@ public class SesLayerAdder extends JFrame implements HttpHandler{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	
@@ -345,6 +350,26 @@ public class SesLayerAdder extends JFrame implements HttpHandler{
 		//播放报警声音
 		 SoundHelper.PlaySound();
 		//弹出窗口显示传感器异常
+		// shift up node in tree
+			String serviceTitle = layer.getLayerSourceTitle();
+			String serviceType = layer.getLayerSourceType();
+			DefaultMutableTreeNode node = tree.getLayerStorageNode(serviceTitle, serviceType);
+			tree.shiftUpNode(node);
+
+			// show new point on map在地图上显示一个新的点
+			layer.getBBox();   //layer是FeatureServiceLayer类的一个对象 
+			LayerContext context = map.getLayerContext();
+			try {
+				context.shiftUp(layer);
+				
+				context.eventCaught(new OXFEvent(layer, EventName.LAYER_REAL_TIME_REFRESH, null));
+			}
+			catch (OXFEventException e) {
+				e.printStackTrace();
+			}
+			catch (OXFException e) {
+				e.printStackTrace();
+			}
 		 //xiaodai自己添加的
 		 if(companyName.equals("甘肃电投")){
 			 //JTextField txtResult = new JTextField(companyName+"相关消息");
@@ -352,37 +377,19 @@ public class SesLayerAdder extends JFrame implements HttpHandler{
 			 JTextArea jta=new JTextArea(10, 50);
 			 JScrollPane jsp=new JScrollPane(jta);
 			 jta.setText(companyName+"信息：\n"+companyMessage);
-			 JOptionPane.showMessageDialog(null,jsp,locationName+"信息",JOptionPane.INFORMATION_MESSAGE);
-			 setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-			 
+			 JOptionPane.showMessageDialog(null,jsp,locationName+"信息",JOptionPane.INFORMATION_MESSAGE);			 
+			 System.exit(0);
+		
 		 }
+		 
 		//JOptionPane.showMessageDialog(null,(String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue()+"Fire Alarm","报警消息",JOptionPane.WARNING_MESSAGE);
 		//播放报警声音
 		 //SoundHelper.PlaySound();
 
 
-		// shift up node in tree
-		String serviceTitle = layer.getLayerSourceTitle();
-		String serviceType = layer.getLayerSourceType();
-		DefaultMutableTreeNode node = tree.getLayerStorageNode(serviceTitle, serviceType);
-		tree.shiftUpNode(node);
-
-		// show new point on map在地图上显示一个新的点
-		layer.getBBox();   //layer是FeatureServiceLayer类的一个对象 
-		LayerContext context = map.getLayerContext();
-		try {
-			context.shiftUp(layer);
-			
-			context.eventCaught(new OXFEvent(layer, EventName.LAYER_REAL_TIME_REFRESH, null));
-		}
-		catch (OXFEventException e) {
-			e.printStackTrace();
-		}
-		catch (OXFException e) {
-			e.printStackTrace();
-		}
+		
 		//弹出窗口显示传感器异常
-	JOptionPane.showMessageDialog(null,(String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue()+"请注意，监测到火灾！","报警消息",JOptionPane.INFORMATION_MESSAGE);
+	//JOptionPane.showMessageDialog(null,(String)paramCon.getParameterShellWithCommonName(FOI_ID).getSpecifiedValue()+"请注意，监测到火灾！","报警消息",JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void refreshSesNotificationsLayer()
