@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/swe/!svn/ver/6061/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters
+END
+OperationResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/6019/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters/OperationResult.java
+END
+ParameterContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/6061/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters/ParameterContainer.java
+END
+ParameterShell.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/6028/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters/ParameterShell.java
+END
+IServiceAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters/IServiceAdapter.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/serviceAdapters/package.html
+END

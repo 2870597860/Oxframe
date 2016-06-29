@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/swe/!svn/ver/5785/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf
+END
+build_doc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build_doc.xml
+END
+capabilities.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/capabilities.xml
+END
+compile_wmsConfig_schema.bat
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/compile_wmsConfig_schema.bat
+END
+build_wmsConfig_schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build_wmsConfig_schema.xml
+END
+build_jar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/5785/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build_jar.xml
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build.properties
+END
+wmsConfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/wmsConfig.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/swe/!svn/ver/4450/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build.xml
+END
+startSimpleSOSTestClient.bat
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/startSimpleSOSTestClient.bat
+END
+log4j_wms.properties
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/log4j_wms.properties
+END
+start.bat
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/start.bat
+END
+start.sh
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/swe/!svn/ver/5704/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/start.sh
+END
+build_ogc_schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/build_ogc_schema.xml
+END
+wmsConfig_schema.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/wmsConfig_schema.xsd
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/web.xml
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/conf/.cvsignore
+END

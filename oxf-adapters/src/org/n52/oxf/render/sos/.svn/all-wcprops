@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/6047/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos
+END
+ProportionalCircleMapRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/ProportionalCircleMapRenderer.java
+END
+SimpleOM2KMLRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/SimpleOM2KMLRenderer.java
+END
+NNRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/NNRenderer.java
+END
+AnimatedMapChartRenderer4OnePhenomenon.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/AnimatedMapChartRenderer4OnePhenomenon.java
+END
+TimeSeriesChartRenderer4xPhenomenons.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/TimeSeriesChartRenderer4xPhenomenons.java
+END
+IDWRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/IDWRenderer.java
+END
+ScatterPlotChartRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/ScatterPlotChartRenderer.java
+END
+InterpolationRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/InterpolationRenderer.java
+END
+AnimatedMapBarChartRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/AnimatedMapBarChartRenderer.java
+END
+ObservedValueTuple.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/ObservedValueTuple.java
+END
+TimeSeriesMapChartRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/TimeSeriesMapChartRenderer.java
+END
+TimeSeriesChartRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/TimeSeriesChartRenderer.java
+END
+ObservationSeriesCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/ObservationSeriesCollection.java
+END
+ObservationRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/ObservationRenderer.java
+END
+Arrow.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/Arrow.java
+END
+TimeCategoryPlot.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/TimeCategoryPlot.java
+END
+WindFieldRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/WindFieldRenderer.java
+END
+MyChartRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/MyChartRenderer.java
+END
+FeatureGeometryRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/6047/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/sos/FeatureGeometryRenderer.java
+END

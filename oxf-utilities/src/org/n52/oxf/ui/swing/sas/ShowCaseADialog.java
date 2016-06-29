@@ -1,0 +1,200 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 24.01.2008
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.awt.Component;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import org.n52.oxf.serviceAdapters.sas.SASAdapter;
+
+/**
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ *
+ */
+public class ShowCaseADialog extends JDialog {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel jContentPane = null;
+    private AdvertisePanel advertisePanel = null;
+    private SubscribePanel subscribePanel = null;
+    private AlertPanel alertPanel = null;
+    private JPanel servicePanel = null;
+    private JLabel serviceLabel = null;
+    private JTextField serviceTextField = null;
+    
+    private SASAdapter adapter;
+    
+	private String serviceURL;
+    
+    /**
+     * @param owner
+     */
+    public ShowCaseADialog(Component owner, String serviceURL) {
+        adapter = new SASAdapter();
+        this.serviceURL = serviceURL;
+        
+        initialize(owner);
+        
+        serviceTextField.setText(serviceURL);
+    }
+
+    /**
+     * This method initializes this
+     * 
+     * @return void
+     */
+    private void initialize(Component owner) {
+        this.setSize(465, 544);
+        this.setLocation(owner.getLocation());
+        this.setTitle("Communicate with SAS");
+        this.setContentPane(getJContentPane());
+    }
+
+    /**
+     * This method initializes jContentPane
+     * 
+     * @return javax.swing.JPanel
+     */
+    private JPanel getJContentPane() {
+        if (jContentPane == null) {
+            GridBagConstraints gridBagConstraints21 = new GridBagConstraints();
+            gridBagConstraints21.weightx = 100.0D;
+            gridBagConstraints21.fill = GridBagConstraints.HORIZONTAL;
+            gridBagConstraints21.gridx = 0;
+            gridBagConstraints21.gridy = 0;
+            gridBagConstraints21.weighty = 100.0D;
+            GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
+            gridBagConstraints2.gridx = 0;
+            gridBagConstraints2.fill = GridBagConstraints.BOTH;
+            gridBagConstraints2.weightx = 100.0D;
+            gridBagConstraints2.weighty = 100.0D;
+            gridBagConstraints2.gridy = 3;
+            GridBagConstraints gridBagConstraints1 = new GridBagConstraints();
+            gridBagConstraints1.gridx = 0;
+            gridBagConstraints1.fill = GridBagConstraints.BOTH;
+            gridBagConstraints1.weightx = 100.0D;
+            gridBagConstraints1.weighty = 100.0D;
+            gridBagConstraints1.gridy = 2;
+            GridBagConstraints gridBagConstraints = new GridBagConstraints();
+            gridBagConstraints.gridx = 0;
+            gridBagConstraints.fill = GridBagConstraints.BOTH;
+            gridBagConstraints.weightx = 100.0D;
+            gridBagConstraints.weighty = 100.0D;
+            gridBagConstraints.gridy = 1;
+            jContentPane = new JPanel();
+            jContentPane.setLayout(new GridBagLayout());
+            jContentPane.add(getServicePanel(), gridBagConstraints21);
+            jContentPane.add(getAdvertisePanel(), gridBagConstraints);
+            jContentPane.add(getSubscribePanel(), gridBagConstraints1);
+            jContentPane.add(getAlertPanel(), gridBagConstraints2);
+        }
+        return jContentPane;
+    }
+
+    /**
+     * This method initializes advertisePanel	
+     * 	
+     * @return org.n52.oxf.ui.swing.sas.AdvertisePanel	
+     */
+    private AdvertisePanel getAdvertisePanel() {
+        if (advertisePanel == null) {
+            advertisePanel = new AdvertisePanel(adapter, serviceURL);
+        }
+        return advertisePanel;
+    }
+
+    /**
+     * This method initializes subscribePanel	
+     * 	
+     * @return org.n52.oxf.ui.swing.sas.SubscribePanel	
+     */
+    private SubscribePanel getSubscribePanel() {
+        if (subscribePanel == null) {
+            subscribePanel = new SubscribePanel(adapter,serviceURL);
+        }
+        return subscribePanel;
+    }
+
+    /**
+     * This method initializes alertPanel	
+     * 	
+     * @return org.n52.oxf.ui.swing.sas.AlertPanel	
+     */
+    private AlertPanel getAlertPanel() {
+        if (alertPanel == null) {
+            alertPanel = new AlertPanel(adapter,serviceURL);
+        }
+        return alertPanel;
+    }
+
+    /**
+     * This method initializes servicePanel	
+     * 	
+     * @return javax.swing.JPanel	
+     */
+    private JPanel getServicePanel() {
+        if (servicePanel == null) {
+            GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
+            gridBagConstraints4.gridx = 0;
+            gridBagConstraints4.insets = new Insets(5, 5, 5, 5);
+            gridBagConstraints4.gridy = 0;
+            GridBagConstraints gridBagConstraints3 = new GridBagConstraints();
+            gridBagConstraints3.fill = GridBagConstraints.HORIZONTAL;
+            gridBagConstraints3.gridy = 0;
+            gridBagConstraints3.weightx = 1.0;
+            gridBagConstraints3.gridx = 1;
+            serviceLabel = new JLabel();
+            serviceLabel.setText("Service to connect:");
+            servicePanel = new JPanel();
+            servicePanel.setLayout(new GridBagLayout());
+            servicePanel.add(serviceLabel, gridBagConstraints4);
+            servicePanel.add(getServiceTextField(), gridBagConstraints3);
+        }
+        return servicePanel;
+    }
+
+    /**
+     * This method initializes serviceTextField	
+     * 	
+     * @return javax.swing.JTextField	
+     */
+    public JTextField getServiceTextField() {
+        if (serviceTextField == null) {
+            serviceTextField = new JTextField();
+            serviceTextField.setEditable(false);
+        }
+        return serviceTextField;
+    }
+
+}  //  @jve:decl-index=0:visual-constraint="10,10"

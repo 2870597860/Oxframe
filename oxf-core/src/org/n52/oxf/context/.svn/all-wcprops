@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/6041/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context
+END
+ContextCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/ContextCollection.java
+END
+LayerContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/6041/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/LayerContext.java
+END
+ContextBoundingBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/ContextBoundingBox.java
+END
+Context.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/Context.java
+END
+ContextWindow.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/ContextWindow.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/context/package.html
+END

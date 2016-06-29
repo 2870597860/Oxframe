@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time
+END
+TimePeriod.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/TimePeriod.java
+END
+TimeResolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/6046/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/TimeResolution.java
+END
+TimePosition.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/6013/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/TimePosition.java
+END
+TimeFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/6014/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/TimeFactory.java
+END
+TemporalValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/TemporalValueDomain.java
+END
+ITimePeriod.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/ITimePeriod.java
+END
+ITimeResolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/ITimeResolution.java
+END
+ITimePosition.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/time/ITimePosition.java
+END

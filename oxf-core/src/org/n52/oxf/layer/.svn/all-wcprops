@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/swe/!svn/ver/6947/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer
+END
+AbstractLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/6947/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/AbstractLayer.java
+END
+AbstractServiceLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/6024/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/AbstractServiceLayer.java
+END
+IFeatureLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/IFeatureLayer.java
+END
+FeatureLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/FeatureLayer.java
+END
+FeatureLayerProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/FeatureLayerProcessor.java
+END
+FeatureServiceLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/swe/!svn/ver/6026/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/FeatureServiceLayer.java
+END
+FeatureServiceLayerProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/6947/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/FeatureServiceLayerProcessor.java
+END
+IContextLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/6025/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/IContextLayer.java
+END
+LayerProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/LayerProcessor.java
+END
+RasterServiceLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/RasterServiceLayer.java
+END
+RasterServiceLayerProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/layer/RasterServiceLayerProcessor.java
+END

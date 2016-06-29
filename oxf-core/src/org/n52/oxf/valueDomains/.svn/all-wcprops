@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains
+END
+IntegerRangeValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/IntegerRangeValueDomain.java
+END
+DoubleDiscreteValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/DoubleDiscreteValueDomain.java
+END
+IGenericParameterValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/IGenericParameterValue.java
+END
+IntegerDiscreteValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/IntegerDiscreteValueDomain.java
+END
+OpenValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/OpenValueDomain.java
+END
+ObjectValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/ObjectValueDomain.java
+END
+StringValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/StringValueDomain.java
+END
+DoubleRangeValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/DoubleRangeValueDomain.java
+END
+StringOpenValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/StringOpenValueDomain.java
+END

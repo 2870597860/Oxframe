@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/6391/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/spatial
+END
+BoundingBox2D.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/spatial/BoundingBox2D.java
+END
+BoundingBox3D.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/spatial/BoundingBox3D.java
+END
+SpatialDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/spatial/SpatialDomain.java
+END
+BoundingBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/6391/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/valueDomains/spatial/BoundingBox.java
+END

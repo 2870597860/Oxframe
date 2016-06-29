@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/wms
+END
+WMSLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/wms/WMSLayer.java
+END
+GetCapabilitiesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/wms/GetCapabilitiesHandler.java
+END
+GetMapHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/wms/GetMapHandler.java
+END
+WebMapServiceFrontend.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/wms/WebMapServiceFrontend.java
+END

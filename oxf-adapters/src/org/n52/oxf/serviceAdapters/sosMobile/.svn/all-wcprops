@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/swe/!svn/ver/7454/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile
+END
+AbstractTemporalOpsBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/AbstractTemporalOpsBuilder.java
+END
+ProcedureHistoryMember.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/6055/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/ProcedureHistoryMember.java
+END
+SOSmobileRequestBuilderFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/SOSmobileRequestBuilderFactory.java
+END
+TemporalOpsBuilderFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/TemporalOpsBuilderFactory.java
+END
+DescribeSensorTimePair.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/DescribeSensorTimePair.java
+END
+DescribeSensorTemporalOpsBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/DescribeSensorTemporalOpsBuilder.java
+END
+SOSmobileCapabilitiesMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/SOSmobileCapabilitiesMapper.java
+END
+SOSmobileRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/7454/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/SOSmobileRequestBuilder.java
+END
+TestSOSmobileRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/7454/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/TestSOSmobileRequestBuilder.java
+END
+SOSmobileAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/swe/!svn/ver/7454/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/SOSmobileAdapter.java
+END
+TestSOSmobileAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sosMobile/TestSOSmobileAdapter.java
+END

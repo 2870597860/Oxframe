@@ -1,0 +1,242 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 20.05.2006
+ *********************************************************************************/
+
+package org.n52.oxf.feature.sos;
+
+import java.io.IOException;
+
+import javax.xml.namespace.QName;
+
+import net.opengis.gml.AbstractFeatureCollectionType;
+import net.opengis.gml.FeatureCollectionDocument2;
+import net.opengis.gml.FeaturePropertyType;
+import net.opengis.sampling.x00.StationDocument;
+import net.opengis.sampling.x10.SamplingPointDocument;
+import net.opengis.sampling.x10.SamplingSurfaceDocument;
+
+import org.apache.log4j.Logger;
+import org.apache.xmlbeans.XmlCursor;
+import org.apache.xmlbeans.XmlException;
+import org.n52.oxf.OXFException;
+import org.n52.oxf.feature.IFeatureStore;
+import org.n52.oxf.feature.OXFAbstractFeatureCollectionType;
+import org.n52.oxf.feature.OXFFeature;
+import org.n52.oxf.feature.OXFFeatureCollection;
+import org.n52.oxf.feature.OXFSamplingPointType;
+import org.n52.oxf.feature.OXFSamplingSurfaceType;
+import org.n52.oxf.feature.OXFStationType;
+import org.n52.oxf.feature.OXFWVStationType;
+import org.n52.oxf.owsCommon.ServiceDescriptor;
+import org.n52.oxf.owsCommon.capabilities.Operation;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.serviceAdapters.sos.SOSAdapter;
+import org.n52.oxf.serviceAdapters.sos.SOSRequestBuilder_000;
+import org.n52.oxf.util.LoggingHandler;
+import org.n52.wv.WVStationDocument;
+
+/**
+ * This FeatureStore unmarshals the features of interest received by the GetFeatureOfInterest operation of the
+ * SOS.
+ * 
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ * 
+ */
+public class SOSFoiStore implements IFeatureStore {
+
+    private static Logger LOGGER = LoggingHandler.getLogger(SOSFoiStore.class);
+
+    /**
+     * 
+     */
+    public OXFFeatureCollection unmarshalFeatures(OperationResult opsRes) throws OXFException {
+
+        // 1. try to parse the feature data as a FeatureCollection:
+        try {
+            FeatureCollectionDocument2 xb_featureCollDoc = FeatureCollectionDocument2.Factory.parse(opsRes.getIncomingResultAsStream());
+
+            AbstractFeatureCollectionType xb_collection = xb_featureCollDoc.getFeatureCollection();
+            
+            return unmarshalFeatures(xb_collection);
+        }
+        
+        // 2. try to parse the feature data as one single SamplingPoint:
+        catch (org.apache.xmlbeans.XmlException xmlException) {
+            try {
+                SamplingPointDocument xb_samplingPointDoc = SamplingPointDocument.Factory.parse(opsRes.getIncomingResultAsStream());
+                
+                OXFFeature feature = OXFSamplingPointType.create(xb_samplingPointDoc);
+                
+                OXFFeatureCollection coll = new OXFFeatureCollection("any_ID",
+                                                                     null);
+                
+                coll.add(feature);
+                
+                return coll;
+            }
+            catch (Exception e) {
+                throw new OXFException(e);
+            }
+        }
+        catch (IOException ioException) {
+            throw new OXFException(ioException);
+        }
+    }
+
+    /**
+     * 
+     */
+    public OXFFeatureCollection unmarshalFeatures(AbstractFeatureCollectionType xb_featureColl) throws OXFException {
+
+        OXFAbstractFeatureCollectionType oxf_abstFeatureCollType = new OXFAbstractFeatureCollectionType();
+
+        // create empty OXFFeatureCollection-object:
+        OXFFeatureCollection oxf_featureCollection = new OXFFeatureCollection("any_ID",
+                                                                              oxf_abstFeatureCollType);
+
+        // initialize the OXFFeatureCollection-object:
+        oxf_abstFeatureCollType.initializeFeature(oxf_featureCollection, xb_featureColl);
+
+        return oxf_featureCollection;
+    }
+
+    /**
+     * Can be used to parse a single feature entity to an OXFFeature object.
+     * The method supports the Sampling Specification of version 0.0 and 1.0.
+     */
+    public OXFFeature parseFoi(FeaturePropertyType xb_feature) throws OXFException {
+        OXFFeature feature = null;
+
+        XmlCursor c = xb_feature.newCursor();
+        
+        //
+        // parse: Sampling 0.0
+        //
+        
+        // if feature is a Station:
+        if (c.toChild(new QName("http://www.opengis.net/sampling/0.0", "Station"))){
+            try {
+                StationDocument xb_stationDoc = StationDocument.Factory.parse(c.getDomNode());
+
+                feature = OXFStationType.create(xb_stationDoc);
+
+                return feature;
+            }
+            catch (XmlException e) {
+                throw new OXFException(e);
+            }
+        }
+        // if feature is a WVStation:
+        else if (c.toChild(new QName("http://www.n52.org/wv", "WVStation"))) {
+            try {
+                WVStationDocument xb_wvStationDoc = WVStationDocument.Factory.parse(c.getDomNode());
+
+                feature = OXFWVStationType.create(xb_wvStationDoc);
+
+                return feature;
+            }
+            catch (XmlException e) {
+                throw new OXFException(e);
+            }
+        }
+        
+        //
+        // parse: Sampling 1.0.0
+        //
+        
+        // if feature is a SamplingPoint:
+        else if (c.toChild(new QName("http://www.opengis.net/sampling/1.0", "SamplingPoint"))){
+            try {
+                SamplingPointDocument xb_saPointDoc = SamplingPointDocument.Factory.parse(c.getDomNode());
+
+                feature = OXFSamplingPointType.create(xb_saPointDoc);
+
+                return feature;
+            }
+            catch (XmlException e) {
+                throw new OXFException(e);
+            }
+        }
+        
+        // if feature is a SamplingSurface:
+        else if (c.toChild(new QName("http://www.opengis.net/sampling/1.0", "SamplingSurface"))){
+            try {
+                SamplingSurfaceDocument xb_saSurfaceDoc = SamplingSurfaceDocument.Factory.parse(c.getDomNode());
+
+                feature = OXFSamplingSurfaceType.create(xb_saSurfaceDoc);
+
+                return feature;
+            }
+            catch (XmlException e) {
+                throw new OXFException(e);
+            }
+        }
+        
+        // if feature is not known:
+        else {
+            String featureID = xb_feature.getHref();
+
+            // TODO: not nice --> feature has no FeatureType
+            feature = new OXFFeature(featureID, null);
+
+            return feature;
+        }
+    }
+
+    /*
+     * test:
+     */
+    public static void main(String[] args) throws Exception {
+
+        String sosUrl = "http://v-wupper:9090/52nSOSv2_ArcSDE/sos";
+        String sosVersion = "0.0.0";
+        
+        SOSAdapter adapter = new SOSAdapter(sosVersion);
+        ServiceDescriptor serviceDesc = adapter.initService(sosUrl);
+        
+        Operation getFoiOp = serviceDesc.getOperationsMetadata().getOperationByName(SOSAdapter.GET_FEATURE_OF_INTEREST);
+
+        ParameterContainer paramCon = new ParameterContainer();
+
+        paramCon.addParameterShell(SOSRequestBuilder_000.GET_FOI_SERVICE_PARAMETER, "SOS");
+        paramCon.addParameterShell(SOSRequestBuilder_000.GET_FOI_VERSION_PARAMETER,
+                                   SOSAdapter.SUPPORTED_VERSIONS[0]);
+        paramCon.addParameterShell(SOSRequestBuilder_000.GET_FOI_ID_PARAMETER, new String[]{"wv.station-93", "wv.station-85"});
+
+        OperationResult opResult = adapter.doOperation(getFoiOp, paramCon);
+
+        SOSFoiStore featureStore = new SOSFoiStore();
+        OXFFeatureCollection featureColl = featureStore.unmarshalFeatures(opResult);
+
+        for (OXFFeature foi : featureColl) {
+
+            if (foi.getFeatureType().hasAttribute(OXFWVStationType.HOSTED_PROCEDURES)) {
+                System.out.println("create attribute HOSTED_PROCEDURES");
+            }
+        }
+
+    }
+}

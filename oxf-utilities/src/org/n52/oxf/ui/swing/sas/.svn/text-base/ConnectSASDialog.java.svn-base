@@ -1,0 +1,137 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 24.01.2008
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.awt.Component;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class ConnectSASDialog extends JDialog {
+
+    private static final long serialVersionUID = 1L;
+    private JPanel jContentPane = null;
+    private JComboBox urlComboBox = null;
+    private JLabel urlLabel = null;
+    private ConnectSASDialogController controller;
+    private JButton sasDemoButton = null;
+    
+    /**
+     * @param owner
+     */
+    public ConnectSASDialog(Component owner) {
+        initialize(owner.getX(), owner.getY());
+        
+        controller = new ConnectSASDialogController(this);
+    }
+
+    /**
+     * This method initializes this
+     * 
+     * @return void
+     */
+    private void initialize(int x, int y) {
+        this.setSize(405, 133);
+        this.setLocation(x,y);
+        this.setTitle("Connect to SAS");
+        this.setContentPane(getJContentPane());
+    }
+
+    /**
+     * This method initializes jContentPane
+     * 
+     * @return javax.swing.JPanel
+     */
+    private JPanel getJContentPane() {
+        if (jContentPane == null) {
+            GridBagConstraints gridBagConstraints12 = new GridBagConstraints();
+            gridBagConstraints12.gridx = 1;
+            gridBagConstraints12.fill = GridBagConstraints.HORIZONTAL;
+            gridBagConstraints12.gridy = 6;
+            GridBagConstraints gridBagConstraints1 = new GridBagConstraints();
+            gridBagConstraints1.gridx = 0;
+            gridBagConstraints1.insets = new Insets(10, 10, 10, 10);
+            gridBagConstraints1.gridy = 0;
+            urlLabel = new JLabel();
+            urlLabel.setText("SAS:");
+            GridBagConstraints gridBagConstraints = new GridBagConstraints();
+            gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+            gridBagConstraints.gridx = 1;
+            gridBagConstraints.gridy = 0;
+            gridBagConstraints.ipadx = 261;
+            gridBagConstraints.weightx = 1.0;
+            gridBagConstraints.insets = new Insets(0, 0, 0, 0);
+            jContentPane = new JPanel();
+            jContentPane.setLayout(new GridBagLayout());
+            jContentPane.add(getUrlComboBox(), gridBagConstraints);
+            jContentPane.add(urlLabel, gridBagConstraints1);
+            jContentPane.add(getSasDemoButton(), gridBagConstraints12);
+        }
+        return jContentPane;
+    }
+
+    /**
+     * This method initializes urlComboBox	
+     * 	
+     * @return javax.swing.JComboBox	
+     */
+    public JComboBox getUrlComboBox() {
+        if (urlComboBox == null) {
+            urlComboBox = new JComboBox();
+        }
+        return urlComboBox;
+    }
+
+    /**
+     * This method initializes sasDemoButton	
+     * 	
+     * @return javax.swing.JButton	
+     */
+    private JButton getSasDemoButton() {
+        if (sasDemoButton == null) {
+            sasDemoButton = new JButton();
+            sasDemoButton.setText("SAS Demonstration");
+            sasDemoButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent e) {
+                    controller.actionPerformed_sasDemoButton();
+                }
+            });
+        }
+        return sasDemoButton;
+    }
+
+    public static void main(String[] args) {
+        new ConnectSASDialog(new JFrame()).setVisible(true);
+    }
+}  //  @jve:decl-index=0:visual-constraint="10,10"

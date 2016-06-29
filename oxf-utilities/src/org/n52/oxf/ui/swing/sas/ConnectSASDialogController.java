@@ -1,0 +1,134 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 08.03.2007
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+import java.net.ConnectException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import javax.swing.JOptionPane;
+
+import org.n52.oxf.OXFException;
+import org.n52.oxf.owsCommon.ExceptionReport;
+import org.n52.oxf.owsCommon.capabilities.Operation;
+import org.n52.oxf.serviceAdapters.IServiceAdapter;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.serviceAdapters.sas.SASAdapter;
+import org.n52.oxf.ui.swing.ShowRequestDialog;
+import org.n52.oxf.ui.swing.ShowXMLDocDialog;
+import org.n52.oxf.util.IOHelper;
+
+public class ConnectSASDialogController {
+
+    private SASAdapter sasAdapter;
+    private ConnectSASDialog view;
+
+    public ConnectSASDialogController(ConnectSASDialog dialog) {
+        this.view = dialog;
+
+        this.sasAdapter = new SASAdapter();
+
+        this.loadURLs();
+    }
+
+    private void loadURLs() {
+        Properties properties = new Properties();
+        try {
+            properties.load(IServiceAdapter.class.getResourceAsStream("/serviceURLs.properties"));
+
+            Enumeration propKeys = properties.keys();
+            while (propKeys.hasMoreElements()) {
+                String key = (String) propKeys.nextElement();
+
+                if (key.substring(0, 3) != null && key.substring(0, 3).equals("SAS")) {
+                    String url = (String) properties.get(key);
+                    view.getUrlComboBox().addItem(url);
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void actionPerformed_GetCapabilitiesButton(ActionEvent event) {
+        try {
+            URL url = new URL(view.getUrlComboBox().getSelectedItem().toString().trim());
+
+            ParameterContainer paramCon = new ParameterContainer();
+            paramCon.addParameterShell("version", SASAdapter.SUPPORTED_VERSIONS[0]);
+            paramCon.addParameterShell("service", SASAdapter.SERVICE_TYPE);
+
+            String postRequest = sasAdapter.getSASRequestBuilder().buildCapabilitiesRequest(paramCon);
+
+            int returnVal = new ShowRequestDialog(view, "GetCapabilities Request", postRequest).showDialog();
+
+            if (returnVal == ShowRequestDialog.APPROVE_OPTION) {
+
+                OperationResult opResult = sasAdapter.doOperation(new Operation(SASAdapter.GET_CAPABILITIES_OP_NAME,
+                                                                                url.toString() + "?",
+                                                                                url.toString()), paramCon);
+
+                String getCapsDoc = IOHelper.readText(opResult.getIncomingResultAsStream());
+
+                new ShowXMLDocDialog(view.getLocation(), "GetCapabilitites Response", getCapsDoc).setVisible(true);
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        catch (OXFException e) {
+            if (e.getCause() instanceof ConnectException) {
+                JOptionPane.showMessageDialog(view, "Could not connect to service!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            e.printStackTrace();
+        }
+        catch (ExceptionReport e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void actionPerformed_SubscribeButton(ActionEvent event) {
+        try {
+            URL url = new URL(view.getUrlComboBox().getSelectedItem().toString().trim());
+
+        }
+        catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void actionPerformed_sasDemoButton() {
+        new ShowCaseADialog(view, view.getUrlComboBox().getSelectedItem().toString().trim()).setVisible(true);
+    }
+
+}

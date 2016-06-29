@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/swe/!svn/ver/10753/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos
+END
+RestSosFrontend.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/10753/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/RestSosFrontend.java
+END
+TestRDFEncoding.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/10753/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/TestRDFEncoding.java
+END
+om2kml_00.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/swe/!svn/ver/2928/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/om2kml_00.xsl
+END
+om2kml.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/swe/!svn/ver/5615/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/om2kml.xsl
+END
+GetObservationHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/swe/!svn/ver/9933/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/GetObservationHandler.java
+END
+RDFEncoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/swe/!svn/ver/9904/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/RDFEncoder.java
+END
+ObservationMerger.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/swe/!svn/ver/9850/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/ObservationMerger.java
+END
+TestObservationMerger.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/10753/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/TestObservationMerger.java
+END
+XSLTTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/swe/!svn/ver/10315/incubation/OXRestWS/trunk/OX-RestWS/src/org/n52/oxf/rest/sos/XSLTTransformer.java
+END

@@ -1,0 +1,420 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 06.01.2006
+ *********************************************************************************/
+
+package org.n52.oxf.serviceAdapters.sos;
+
+import javax.xml.namespace.QName;
+
+import net.opengeospatial.ows.AcceptVersionsType;
+import net.opengeospatial.ows.SectionsType;
+import net.opengis.gml.TimeInstantType;
+import net.opengis.gml.TimePeriodType;
+import net.opengis.gml.TimePositionType;
+import net.opengis.ogc.BinaryTemporalOpType;
+import net.opengis.ogc.PropertyNameType;
+import net.opengis.sos.x00.DescribeSensorDocument;
+import net.opengis.sos.x00.GetCapabilitiesDocument;
+import net.opengis.sos.x00.GetFeatureOfInterestDocument;
+import net.opengis.sos.x00.GetObservationDocument;
+import net.opengis.sos.x00.ResponseModeType;
+import net.opengis.sos.x00.DescribeSensorDocument.DescribeSensor;
+import net.opengis.sos.x00.GetCapabilitiesDocument.GetCapabilities;
+import net.opengis.sos.x00.GetFeatureOfInterestDocument.GetFeatureOfInterest;
+import net.opengis.sos.x00.GetObservationDocument.GetObservation;
+import net.opengis.sos.x00.GetObservationDocument.GetObservation.EventTime;
+import net.opengis.sos.x00.GetObservationDocument.GetObservation.Result;
+
+import org.apache.xmlbeans.XmlCursor;
+import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlObject;
+import org.n52.oxf.OXFException;
+import org.n52.oxf.owsCommon.capabilities.ITime;
+import org.n52.oxf.owsCommon.capabilities.Parameter;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.serviceAdapters.ParameterShell;
+import org.n52.oxf.util.XmlBeansHelper;
+import org.n52.oxf.valueDomains.time.ITimePeriod;
+import org.n52.oxf.valueDomains.time.ITimePosition;
+import org.n52.oxf.valueDomains.time.TimeFactory;
+
+/**
+ * contains attributes and methods to encode SOSOperationRequests as String in xml-format
+ * 
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ */
+public class SOSRequestBuilder_000 implements ISOSRequestBuilder {
+
+    /**
+     * builds the GetCapabilities-Request. <br>
+     * <br>
+     * For the ParameterContainer 'parameters' are the ParameterShells with the following serviceSidedNames
+     * required:
+     * <li>service</li>
+     * 
+     * <br>
+     * <br>
+     * The following are optional: The following are optional:
+     * <li>updateSequence</li>
+     * <li>acceptVersions</li>
+     * <li>sections</li>
+     * <li>acceptFormats</li>
+     * 
+     * @param parameters
+     *        the parameters of the request
+     * 
+     * @return CapabilitiesRequest in xml-Format as String
+     */
+    public String buildGetCapabilitiesRequest(ParameterContainer parameters) {
+
+        GetCapabilitiesDocument getCapDoc = GetCapabilitiesDocument.Factory.newInstance();
+
+        GetCapabilities getCap = getCapDoc.addNewGetCapabilities();
+
+        //
+        // set required elements:
+        //  
+
+        getCap.setService((String) parameters.getParameterShellWithServiceSidedName(GET_CAPABILITIES_SERVICE_PARAMETER).getSpecifiedValue());
+
+        //
+        // set optional elements:
+        //
+
+        // Parameter "updateSequence":
+        if (parameters.getParameterShellWithServiceSidedName(GET_CAPABILITIES_UPDATE_SEQUENCE_PARAMETER) != null) {
+            getCap.setUpdateSequence((String) parameters.getParameterShellWithServiceSidedName(GET_CAPABILITIES_UPDATE_SEQUENCE_PARAMETER).getSpecifiedValue());
+        }
+
+        // Parameter "AcceptVersions":
+        ParameterShell versionPS = parameters.getParameterShellWithServiceSidedName(GET_CAPABILITIES_ACCEPT_VERSIONS_PARAMETER);
+        if (versionPS == null) {
+            versionPS = parameters.getParameterShellWithCommonName(Parameter.COMMON_NAME_VERSION);
+        }
+        if (versionPS != null) {
+            AcceptVersionsType acceptedVersions = getCap.addNewAcceptVersions();
+
+            if (versionPS.hasSingleSpecifiedValue()) {
+                acceptedVersions.addVersion((String) versionPS.getSpecifiedValue());
+            }
+            else {
+                Object[] versionArray = versionPS.getSpecifiedValueArray();
+                for (Object version : versionArray) {
+                    acceptedVersions.addVersion((String) version);
+                }
+            }
+        }
+
+        // Parameter "sections":
+        ParameterShell sectionParamShell = parameters.getParameterShellWithServiceSidedName(GET_CAPABILITIES_SECTIONS_PARAMETER);
+        if (sectionParamShell != null) {
+            SectionsType sections = getCap.addNewSections();
+
+            if (sectionParamShell.hasMultipleSpecifiedValues()) {
+                String[] selectedSections = (String[]) sectionParamShell.getSpecifiedValueArray();
+                for (int i = 0; i < selectedSections.length; i++) {
+                    sections.addSection(selectedSections[i]);
+                }
+            }
+            else if (sectionParamShell.hasSingleSpecifiedValue()) {
+                sections.addSection((String) sectionParamShell.getSpecifiedValue());
+            }
+        }
+
+        return XmlBeansHelper.formatStringRequest(getCapDoc);
+    }
+
+    
+    public String buildGetObservationByIDRequest(ParameterContainer parameters)
+	throws OXFException {
+    	throw new UnsupportedOperationException("Works only with 1.0.0 so far");
+    }
+    
+    /**
+     * builds the GetObservation-Request. <br>
+     * <br>
+     * For the ParameterContainer 'parameters' are the ParameterShells with the following serviceSidedNames
+     * required:
+     * <li>service</li>
+     * <li>version</li>
+     * <li>offering</li>
+     * <li>observedProperty</li>
+     * <li>resultFormat</li>
+     * 
+     * <br>
+     * <br>
+     * The following ones are optional:
+     * <li>eventTime</li>
+     * <li>procedure</li>
+     * <li>featureOfInterest</li>
+     * <li>result</li>
+     * <li>resultModel</li>
+     * <li>responseMode</li>
+     * 
+     * @param parameters
+     *        parameters of the request
+     * 
+     * @return GetObservationRequest in XML-Format as String
+     * @throws OXFException
+     * @throws OXFException
+     * 
+     */
+    public String buildGetObservationRequest(ParameterContainer parameters) throws OXFException {
+
+        GetObservationDocument xb_getObsDoc = GetObservationDocument.Factory.newInstance();
+
+        GetObservation xb_getObs = xb_getObsDoc.addNewGetObservation();
+
+        //
+        // set required elements:
+        //
+        xb_getObs.setService((String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_SERVICE_PARAMETER).getSpecifiedValue());
+
+        xb_getObs.setVersion((String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_VERSION_PARAMETER).getSpecifiedValue());
+
+        xb_getObs.setOffering((String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_OFFERING_PARAMETER).getSpecifiedValue());
+
+        xb_getObs.setResponseFormat((String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESPONSE_FORMAT_PARAMETER).getSpecifiedValue());
+
+        ParameterShell observedPropertyPS = parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_OBSERVED_PROPERTY_PARAMETER);
+        if (observedPropertyPS.hasMultipleSpecifiedValues()) {
+            Object[] observedProperties = observedPropertyPS.getSpecifiedValueArray();
+            xb_getObs.setObservedPropertyArray((String[]) observedProperties);
+        }
+        else if (observedPropertyPS.hasSingleSpecifiedValue()) {
+            String observedProperty = (String) observedPropertyPS.getSpecifiedValue();
+            xb_getObs.setObservedPropertyArray(new String[] {observedProperty});
+        }
+
+        //
+        // set optional elements:
+        //
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_EVENT_TIME_PARAMETER) != null) {
+            ITime specifiedTime;
+
+            Object timeParamValue = parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_EVENT_TIME_PARAMETER).getSpecifiedValue();
+            if (timeParamValue instanceof ITime) {
+                specifiedTime = (ITime) timeParamValue;
+            }
+            else if (timeParamValue instanceof String) {
+                specifiedTime = TimeFactory.createTime((String) timeParamValue);
+            }
+            else {
+                throw new OXFException("The class (" + timeParamValue.getClass()
+                        + ") of the value of the parameter 'eventTime' is not supported.");
+            }
+
+            BinaryTemporalOpType xb_binTempOp = BinaryTemporalOpType.Factory.newInstance();
+
+            PropertyNameType xb_propertyName = xb_binTempOp.addNewPropertyName();
+            XmlCursor cursor = xb_binTempOp.newCursor();
+            cursor.toChild(new QName("http://www.opengis.net/ogc", "PropertyName"));
+            cursor.setTextValue("urn:ogc:data:time:iso8601");
+
+            String timeType = null;
+
+            if (specifiedTime instanceof ITimePeriod) {
+                ITimePeriod oc_timePeriod = (ITimePeriod) specifiedTime;
+                TimePeriodType xb_timePeriod = TimePeriodType.Factory.newInstance();
+
+                TimePositionType xb_beginPosition = xb_timePeriod.addNewBeginPosition();
+                xb_beginPosition.setStringValue(oc_timePeriod.getStart().toISO8601Format());
+
+                TimePositionType xb_endPosition = xb_timePeriod.addNewEndPosition();
+                xb_endPosition.setStringValue(oc_timePeriod.getEnd().toISO8601Format());
+
+                xb_binTempOp.setTimeObject(xb_timePeriod);
+                timeType = "TimePeriod";
+            }
+            else if (specifiedTime instanceof ITimePosition) {
+                ITimePosition oc_timePosition = (ITimePosition) specifiedTime;
+                TimeInstantType xb_timeInstant = TimeInstantType.Factory.newInstance();
+
+                TimePositionType xb_timePosition = TimePositionType.Factory.newInstance();
+                xb_timePosition.setStringValue(oc_timePosition.toISO8601Format());
+
+                xb_timeInstant.setTimePosition(xb_timePosition);
+
+                xb_binTempOp.setTimeObject(xb_timeInstant);
+                timeType = "TimePosition";
+            }
+
+            EventTime eventTime = xb_getObs.addNewEventTime();
+            eventTime.setTemporalOps(xb_binTempOp);
+
+            // rename elements:
+            cursor = eventTime.newCursor();
+            cursor.toChild(new QName("http://www.opengis.net/ogc", "temporalOps"));
+            cursor.setName(new QName("http://www.opengis.net/ogc", "T_Equals"));
+
+            cursor.toChild(new QName("http://www.opengis.net/gml", "_TimeObject"));
+            cursor.setName(new QName("http://www.opengis.net/gml", timeType));
+
+            // TODO Spec-Too-Flexible-Problem: for eventTime are several other "temporalOps" possible (not
+            // only "TEquals")
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_PROCEDURE_PARAMETER) != null) {
+            Object[] procedures = parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_PROCEDURE_PARAMETER).getSpecifiedValueArray();
+            xb_getObs.setProcedureArray((String[]) procedures);
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_FEATURE_OF_INTEREST_PARAMETER) != null) {
+            ParameterShell foiParamShell = parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_FEATURE_OF_INTEREST_PARAMETER);
+            if (foiParamShell.hasMultipleSpecifiedValues()) {
+                Object[] fois = foiParamShell.getSpecifiedValueArray();
+                xb_getObs.addNewFeatureOfInterest().setObjectIDArray((String[]) fois);
+            }
+            else {
+                Object foi = foiParamShell.getSpecifiedValue();
+                xb_getObs.addNewFeatureOfInterest().setObjectIDArray(new String[] { (String)foi});
+            }
+            // TODO Spec-Too-Flexible-Problem: it is also possible that the FeatureOfInterest is specified as
+            // a "spatialOps"
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESULT_PARAMETER) != null) {
+            String filter = (String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESULT_PARAMETER).getSpecifiedValue();
+
+            Result resultFilter = xb_getObs.addNewResult();
+
+            try {
+                XmlObject xobj = XmlObject.Factory.parse(filter);
+                resultFilter.set(xobj);
+            }
+            catch (XmlException e) {
+                throw new OXFException(e);
+            }
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESULT_MODEL_PARAMETER) != null) {
+            xb_getObs.setResultModel( (new QName("http://www.opengis.net/gml", // http://www.opengis.net/sos/0.0
+                                                 (String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESULT_MODEL_PARAMETER).getSpecifiedValue())));
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESPONSE_MODE_PARAMETER) != null) {
+            ResponseModeType.Enum responseModeEnum = ResponseModeType.Enum.forString((String) parameters.getParameterShellWithServiceSidedName(GET_OBSERVATION_RESPONSE_MODE_PARAMETER).getSpecifiedValue());
+            xb_getObs.setResponseMode(responseModeEnum);
+        }
+
+        return XmlBeansHelper.formatStringRequest(xb_getObsDoc);
+    }
+
+    /**
+     * builds a DescribeSensor-Request. <br>
+     * <br>
+     * For the ParameterContainer 'parameters' are the ParameterShells with the following serviceSidedNames
+     * required:
+     * <li>service</li>
+     * <li>version</li>
+     * <li>sensorID</li>
+     * 
+     * <br>
+     * <br>
+     * The following are optional:
+     * <li>outputFormat</li>
+     * 
+     * 
+     * @param parameters
+     *        parameters and values of the request
+     * 
+     * @return DescribeSensorRequest in XML-Format as String
+     */
+    public String buildDescribeSensorRequest(ParameterContainer parameters) {
+
+        DescribeSensorDocument descSensorDoc = DescribeSensorDocument.Factory.newInstance();
+
+        DescribeSensor descSensor = descSensorDoc.addNewDescribeSensor();
+
+        // set required elements:
+
+        descSensor.setService((String) parameters.getParameterShellWithServiceSidedName(DESCRIBE_SENSOR_SERVICE_PARAMETER).getSpecifiedValue());
+
+        descSensor.setVersion((String) parameters.getParameterShellWithServiceSidedName(DESCRIBE_SENSOR_VERSION_PARAMETER).getSpecifiedValue());
+
+        descSensor.setProcedure((String) parameters.getParameterShellWithServiceSidedName(DESCRIBE_SENSOR_PROCEDURE_PARAMETER).getSpecifiedValue());
+
+        if (parameters.getParameterShellWithServiceSidedName(DESCRIBE_SENSOR_OUTPUT_FORMAT) != null) {
+            descSensor.setOutputFormat((String) parameters.getParameterShellWithServiceSidedName(DESCRIBE_SENSOR_OUTPUT_FORMAT).getSpecifiedValue());
+        }
+        // TODO HACK -> output format is hard-coded:
+        else {
+            descSensor.setOutputFormat("text/xml;subtype=\"sensorML/1.0.0\"");
+        }
+
+        return XmlBeansHelper.formatStringRequest(descSensorDoc);
+    }
+
+    /**
+     * 
+     */
+    public String buildGetFeatureOfInterestRequest(ParameterContainer parameters) {
+
+        GetFeatureOfInterestDocument getFoIDoc = GetFeatureOfInterestDocument.Factory.newInstance();
+
+        GetFeatureOfInterest getFoI = getFoIDoc.addNewGetFeatureOfInterest();
+
+        // set required elements:
+
+        getFoI.setService((String) parameters.getParameterShellWithServiceSidedName(GET_FOI_SERVICE_PARAMETER).getSpecifiedValue());
+
+        ParameterShell versionPS = parameters.getParameterShellWithServiceSidedName(GET_FOI_VERSION_PARAMETER);
+        getFoI.setVersion((String) versionPS.getSpecifiedValue());
+
+        // set optional elements:
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_FOI_ID_PARAMETER) != null) {
+            ParameterShell foiIDParamShell = parameters.getParameterShellWithServiceSidedName(GET_FOI_ID_PARAMETER);
+            if (foiIDParamShell.hasSingleSpecifiedValue()) {
+                String foiIDParamValue = (String) foiIDParamShell.getSpecifiedValue();
+                getFoI.setFeatureOfInterestIdArray(new String[] {foiIDParamValue});
+            }
+            else {
+                String[] foiIDParamValue = (String[]) foiIDParamShell.getSpecifiedValueArray();
+                getFoI.setFeatureOfInterestIdArray(foiIDParamValue);
+            }
+        }
+        else if (parameters.getParameterShellWithServiceSidedName(ISOSRequestBuilder.GET_FOI_LOCATION_PARAMETER) != null) {
+            throw new UnsupportedOperationException("The parameter '" + ISOSRequestBuilder.GET_FOI_LOCATION_PARAMETER
+                    + "' is not yet supported.");
+        }
+
+        if (parameters.getParameterShellWithServiceSidedName(GET_FOI_EVENT_TIME_PARAMETER) != null) {
+            throw new UnsupportedOperationException("The parameter '" + GET_FOI_EVENT_TIME_PARAMETER
+                    + "' is not yet supported.");
+        }
+
+        return XmlBeansHelper.formatStringRequest(getFoIDoc);
+    }
+
+    public String buildInsertObservation(ParameterContainer parameters) {
+    	throw new UnsupportedOperationException("Works only with 1.0.0 so far");
+    }
+
+    public String buildRegisterSensor(ParameterContainer parameters) {
+        throw new UnsupportedOperationException("Works only with 1.0.0 so far");
+    }
+
+}

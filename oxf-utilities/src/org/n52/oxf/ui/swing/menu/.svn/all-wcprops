@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/6951/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu
+END
+ConnectServiceMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/6951/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/ConnectServiceMenu.java
+END
+OptionsMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/OptionsMenu.java
+END
+Menu.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/Menu.java
+END
+SelectionMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/SelectionMenu.java
+END
+ProjectMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/ProjectMenu.java
+END
+MemoryMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/menu/MemoryMenu.java
+END

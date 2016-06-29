@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/6064/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos
+END
+ObservedPropertyPanel4TwoProps.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ObservedPropertyPanel4TwoProps.java
+END
+SOSLayerAdder.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/SOSLayerAdder.java
+END
+ConnectSOSDialogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/6058/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ConnectSOSDialogController.java
+END
+GetObs_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/GetObs_Configurator.java
+END
+PluginRendererDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/PluginRendererDialog.java
+END
+AddFOI_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/AddFOI_Configurator.java
+END
+GetObs_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/GetObs_ConfiguratorController.java
+END
+AddFOI_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/AddFOI_ConfiguratorController.java
+END
+SOSConnectTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/6039/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/SOSConnectTool.java
+END
+GetFeatureOfInterest_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/GetFeatureOfInterest_Configurator.java
+END
+GetFeatureOfInterest_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/GetFeatureOfInterest_ConfiguratorController.java
+END
+ObservedPropertyPanel4OneProp.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ObservedPropertyPanel4OneProp.java
+END
+ShowGetObservationRequestDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ShowGetObservationRequestDialog.java
+END
+ChooseRendererDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ChooseRendererDialog.java
+END
+DescSensor_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/6059/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/DescSensor_Configurator.java
+END
+ConnectSOSDialogReduced.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/6040/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ConnectSOSDialogReduced.java
+END
+ChooseRendererDialogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ChooseRendererDialogController.java
+END
+ObservedPropertyPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ObservedPropertyPanel.java
+END
+DescSensor_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/6059/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/DescSensor_ConfiguratorController.java
+END
+ConnectSOSDialogReducedController.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/6040/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ConnectSOSDialogReducedController.java
+END
+ConnectSOSDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/6064/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ConnectSOSDialog.java
+END
+ObservedPropertyPanel4XProps.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sos/ObservedPropertyPanel4XProps.java
+END

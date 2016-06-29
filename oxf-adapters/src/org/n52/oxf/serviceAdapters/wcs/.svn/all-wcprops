@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/wcs
+END
+WCSCapabilitiesMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/wcs/WCSCapabilitiesMapper.java
+END
+WCSRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/wcs/WCSRequestBuilder.java
+END
+TestWCSAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/wcs/TestWCSAdapter.java
+END
+WCSAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/wcs/WCSAdapter.java
+END

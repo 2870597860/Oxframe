@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/coverage
+END
+AbstractCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/coverage/AbstractCoverage.java
+END
+DoubleCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/coverage/DoubleCoverage.java
+END
+IntCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/coverage/IntCoverage.java
+END
+CoverageProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/render/coverage/CoverageProcessor.java
+END

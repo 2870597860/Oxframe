@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/6954/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool
+END
+LayerToolBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/LayerToolBar.java
+END
+ZoomRectTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/ZoomRectTool.java
+END
+LayerShiftDownTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/LayerShiftDownTool.java
+END
+ZoomPanToolBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/ZoomPanToolBar.java
+END
+ZoomInTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/ZoomInTool.java
+END
+ZoomOutTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/ZoomOutTool.java
+END
+MapTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/MapTool.java
+END
+PanTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/PanTool.java
+END
+SelectTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/SelectTool.java
+END
+LayerShiftUpTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/LayerShiftUpTool.java
+END
+ZoomToActiveLayerTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/ZoomToActiveLayerTool.java
+END
+FeatureToolBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/FeatureToolBar.java
+END
+LayerRemoveTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/LayerRemoveTool.java
+END
+InfoTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/swe/!svn/ver/6954/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/InfoTool.java
+END
+BaseToolBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/tool/BaseToolBar.java
+END

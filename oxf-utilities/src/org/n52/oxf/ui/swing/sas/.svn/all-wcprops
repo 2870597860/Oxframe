@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/6383/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas
+END
+ConnectSASDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/6383/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/ConnectSASDialog.java
+END
+SubscribePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/SubscribePanel.java
+END
+ConnectSASDialogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/6383/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/ConnectSASDialogController.java
+END
+SubscribePanelController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/SubscribePanelController.java
+END
+AdvertisePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/AdvertisePanel.java
+END
+AlertPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/AlertPanel.java
+END
+AdvertisePanelController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/AdvertisePanelController.java
+END
+AlertPanelController.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/AlertPanelController.java
+END
+ShowCaseADialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sas/ShowCaseADialog.java
+END

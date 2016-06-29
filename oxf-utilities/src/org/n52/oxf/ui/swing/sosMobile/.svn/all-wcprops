@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile
+END
+ShowSensorPosition_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile/ShowSensorPosition_Configurator.java
+END
+ShowSensorPosition_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile/ShowSensorPosition_ConfiguratorController.java
+END
+ShowDomainFeature_Configurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile/ShowDomainFeature_Configurator.java
+END
+RealTimeLayerRefresh_ConfiguratorAndController.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile/RealTimeLayerRefresh_ConfiguratorAndController.java
+END
+ShowDomainFeature_ConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/sosMobile/ShowDomainFeature_ConfiguratorController.java
+END

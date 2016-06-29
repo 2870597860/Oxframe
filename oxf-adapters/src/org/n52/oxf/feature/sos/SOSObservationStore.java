@@ -1,0 +1,183 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 01.02.2006
+ *********************************************************************************/
+
+package org.n52.oxf.feature.sos;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import net.opengis.om.x10.ObservationCollectionDocument;
+import net.opengis.waterml.x20.TimeseriesObservationDocument;
+
+import org.apache.log4j.Logger;
+import org.apache.xmlbeans.XmlObject;
+import org.n52.oxf.OXFException;
+import org.n52.oxf.feature.IFeatureStore;
+import org.n52.oxf.feature.OXFFeature;
+import org.n52.oxf.feature.OXFFeatureCollection;
+import org.n52.oxf.feature.OXFObservationCollectionType;
+import org.n52.oxf.owsCommon.capabilities.Parameter;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.util.LoggingHandler;
+
+/**
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ * 
+ */
+public class SOSObservationStore implements IFeatureStore {
+
+    private static Logger LOGGER = LoggingHandler.getLogger(SOSObservationStore.class);
+
+    /**
+     * 
+     */
+    public OXFFeatureCollection unmarshalFeatures(OperationResult dataToUnmarshal) throws OXFException {
+
+        String version = (String)dataToUnmarshal.getUsedParameters().getParameterShellWithCommonName(Parameter.COMMON_NAME_VERSION).getSpecifiedValue();
+
+
+        OXFFeatureCollection featureCollection = null;
+        
+        if (version.equals("1.0.0")) {
+            featureCollection = unmarshalFeatures100(dataToUnmarshal);
+        }
+        else if (version.equals("0.0.0")) {
+            featureCollection = unmarshalFeatures000(dataToUnmarshal);
+        }
+        
+        return featureCollection;
+    }
+
+    protected OXFFeatureCollection unmarshalFeatures000(OperationResult dataToUnmarshal) throws OXFException {
+        
+        try {
+            InputStream in = dataToUnmarshal.getIncomingResultAsStream();
+            
+            net.opengis.om.x00.ObservationCollectionDocument xb_obsCollectionDoc = net.opengis.om.x00.ObservationCollectionDocument.Factory.parse(in);
+
+            OXFObservationCollectionType obsCollectionType = new OXFObservationCollectionType();
+
+            // create empty OXFFeatureCollection-object:
+            OXFFeatureCollection featureCollection = new OXFFeatureCollection(xb_obsCollectionDoc.getObservationCollection().getId(),
+                                                         obsCollectionType);
+
+            // initialize the OXFFeatureCollection-object:
+            obsCollectionType.initializeFeature(featureCollection, xb_obsCollectionDoc.getObservationCollection());
+
+            return featureCollection;
+        }
+        catch (Exception e) {
+            throw new OXFException(e);
+        }
+    }
+    
+    protected OXFFeatureCollection unmarshalFeatures100(OperationResult dataToUnmarshal) throws OXFException {
+        
+        try {
+            InputStream in = dataToUnmarshal.getIncomingResultAsStream();
+            
+            XmlObject xmlObject = XmlObject.Factory.parse(in);
+            
+            if (xmlObject instanceof net.opengis.om.x10.ObservationCollectionDocument) {
+            	
+                net.opengis.om.x10.ObservationCollectionDocument xb_obsCollectionDoc = (ObservationCollectionDocument) xmlObject;
+
+                OXFObservationCollectionType obsCollectionType = new OXFObservationCollectionType();
+
+                // create empty OXFFeatureCollection-object:
+                OXFFeatureCollection featureCollection = new OXFFeatureCollection(xb_obsCollectionDoc.getObservationCollection().getId(),
+                                                             obsCollectionType);
+
+                // initialize the OXFFeatureCollection-object:
+                obsCollectionType.initializeFeature(featureCollection, xb_obsCollectionDoc.getObservationCollection());
+
+                return featureCollection;
+			} else if (xmlObject instanceof net.opengis.waterml.x20.TimeseriesObservationDocument) {
+				
+				net.opengis.waterml.x20.TimeseriesObservationDocument xb_timeseriesObservationDoc = (TimeseriesObservationDocument) xmlObject;
+				
+                OXFObservationCollectionType obsCollectionType = new OXFObservationCollectionType();
+
+                // create empty OXFFeatureCollection-object:
+                OXFFeatureCollection featureCollection = new OXFFeatureCollection(xb_timeseriesObservationDoc.getTimeseriesObservation().getId(),
+                                                             obsCollectionType);
+
+                // initialize the OXFFeatureCollection-object:
+                obsCollectionType.initializeFeature(featureCollection, xb_timeseriesObservationDoc.getTimeseriesObservation());
+				
+                return featureCollection;
+			}
+
+            throw new OXFException();
+        }
+        catch (Exception e) {
+            throw new OXFException(e);
+        }
+    }
+    
+    
+    
+    /*
+     * --- test ---
+     */
+    public static void main(String[] args) throws OXFException, IOException {
+
+        File file = new File("c:/temp/afis.xml");
+
+        System.out.println(file);
+
+        InputStream in = new FileInputStream(file);
+
+        OXFFeatureCollection fCollection = new SOSObservationStore().unmarshalFeatures(new OperationResult(in,
+                                                                                                           null,
+                                                                                                           null));
+
+        System.out.println("Number of features: " + fCollection.size());
+
+        for (OXFFeature feature : fCollection) {
+
+            System.out.println("Feature: " + feature.getID());
+
+            String[] specifiedAttributes = feature.getSpecifiedAttributes();
+            for (int i = 0; i < specifiedAttributes.length; i++) {
+                System.out.println("\t" + specifiedAttributes[i]);
+
+                if (specifiedAttributes[i].equals("featureOfInterest")) {
+                    OXFFeature foi = (OXFFeature) feature.getAttribute(specifiedAttributes[i]);
+
+                    String[] specifiedAttributesOfFOI = foi.getSpecifiedAttributes();
+                    for (int j = 0; j < specifiedAttributesOfFOI.length; j++) {
+                        System.out.println("\t" + "\t" + specifiedAttributesOfFOI[j]);
+                    }
+                }
+            }
+        }
+
+        System.out.println("fertig");
+    }
+}

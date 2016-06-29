@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/10375/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos
+END
+SOSCapabilitiesMapper_000.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSCapabilitiesMapper_000.java
+END
+SOSCapabilitiesMapper_100.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/swe/!svn/ver/6173/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSCapabilitiesMapper_100.java
+END
+SOSRequestBuilder_000.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/5791/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSRequestBuilder_000.java
+END
+SOSRequestBuilder_100.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/8418/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSRequestBuilder_100.java
+END
+SOSAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/8414/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSAdapter.java
+END
+TestSOSAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/10375/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/TestSOSAdapter.java
+END
+SOSRequestBuilderFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/SOSRequestBuilderFactory.java
+END
+ISOSRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/9600/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sos/ISOSRequestBuilder.java
+END

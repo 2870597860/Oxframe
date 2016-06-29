@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/swe/!svn/ver/6029/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities
+END
+PostRequestMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/PostRequestMethod.java
+END
+Operation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Operation.java
+END
+IDiscreteValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/swe/!svn/ver/6020/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/IDiscreteValueDomain.java
+END
+DCP.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/DCP.java
+END
+ITime.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/ITime.java
+END
+ServiceIdentification.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/ServiceIdentification.java
+END
+ServiceProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/ServiceProvider.java
+END
+ServiceContact.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/ServiceContact.java
+END
+IValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/IValueDomain.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/package.html
+END
+Parameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/6029/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Parameter.java
+END
+Description.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Description.java
+END
+OperationsMetadata.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/OperationsMetadata.java
+END
+Dataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5925/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Dataset.java
+END
+Address.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Address.java
+END
+DatasetParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/DatasetParameter.java
+END
+IBoundingBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/IBoundingBox.java
+END
+GetRequestMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/GetRequestMethod.java
+END
+RequestMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/RequestMethod.java
+END
+IRangeValueDomain.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/IRangeValueDomain.java
+END
+Contact.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Contact.java
+END
+OnlineResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/OnlineResource.java
+END
+Contents.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/owsCommon/capabilities/Contents.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms
+END
+ConnectWMSDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/ConnectWMSDialog.java
+END
+LayerStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/LayerStatus.java
+END
+ConnectWMSDialogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/ConnectWMSDialogController.java
+END
+ShowGetMapRequestDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/ShowGetMapRequestDialog.java
+END
+WMSParameterConfigurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/WMSParameterConfigurator.java
+END
+WMSParameterConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wms/WMSParameterConfiguratorController.java
+END

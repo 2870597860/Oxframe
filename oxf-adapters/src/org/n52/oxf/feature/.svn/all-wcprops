@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/swe/!svn/ver/10717/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature
+END
+OXFStationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFStationType.java
+END
+OXFTruthObservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFTruthObservationType.java
+END
+OXFSamplingSurfaceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/7563/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFSamplingSurfaceType.java
+END
+OXFSamplingPointType.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFSamplingPointType.java
+END
+OXFCountObservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFCountObservationType.java
+END
+OXFMeasurementType.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFMeasurementType.java
+END
+GenericObservationParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/10717/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/GenericObservationParser.java
+END
+OXFObservationCollectionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFObservationCollectionType.java
+END
+OXFCategoryObservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFCategoryObservationType.java
+END
+OXFAbstractFeatureCollectionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFAbstractFeatureCollectionType.java
+END
+OXFWVStationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFWVStationType.java
+END
+OXFTemporalObservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFTemporalObservationType.java
+END
+OXFAbstractFeatureType.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFAbstractFeatureType.java
+END
+OXFAbstractObservationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/OXFAbstractObservationType.java
+END

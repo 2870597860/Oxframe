@@ -1,0 +1,115 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+import org.n52.oxf.OXFException;
+import org.n52.oxf.owsCommon.ExceptionReport;
+import org.n52.oxf.owsCommon.capabilities.Operation;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.serviceAdapters.ParameterShell;
+import org.n52.oxf.serviceAdapters.sas.SASAdapter;
+import org.n52.oxf.serviceAdapters.sas.SASRequestBuilder;
+import org.n52.oxf.serviceAdapters.sas.SASRequestBuilder.Criteria;
+import org.n52.oxf.ui.swing.ShowRequestDialog;
+import org.n52.oxf.ui.swing.ShowXMLDocDialog;
+import org.n52.oxf.util.IOHelper;
+
+public class SubscribePanelController {
+
+	private SASAdapter adapter;
+	private SubscribePanel view;
+	private String serviceURL;
+	
+
+
+	public SubscribePanelController(SubscribePanel view, SASAdapter adapter, 
+			String serviceURL) {
+		super();
+		this.adapter = adapter;
+		this.view = view;
+		this.serviceURL = serviceURL;
+	}
+
+
+
+	public void actionPerformed_SubscribeButton(){
+		
+		try {
+			String sms = null;
+			String email = null;
+			if(!view.getSmsTextField().getText().equals("")){
+				sms = view.getSmsTextField().getText();
+			}
+			if(!view.getEmailTextField().getText().equals("")){
+				email = view.getEmailTextField().getText();
+			}
+			ParameterContainer paramCon = SASRequestBuilder.buildSubscribeParamCon(SASAdapter.SERVICE_TYPE,
+																	                SASAdapter.SUPPORTED_VERSIONS[0],
+																	                view.getSensorIDTextField().getText(),
+																	                sms,
+																	                email);
+			//Add a singel criteria
+
+            paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_FILTER_DEFINITION,view.getPhenTextField().getText());
+            paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_FILTER_CRITERIA,view.getFilterComboBox().getSelectedIndex());
+            if(view.getFilterComboBox().getSelectedIndex()!=Criteria.IS_BETWEEN){
+            	paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_CRITERIA_VALUE,view.getFilterValueTextField().getText());
+            }else{
+            	paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_CRITERIA_LOWER_BOUNDARY,view.getFilterValueTextField().getText());
+            	paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_CRITERIA_UPPER_BOUNDARY,view.getFilterValue2TextField().getText());
+            }
+			
+			
+			
+            String postRequest = SASRequestBuilder.buildSubscribeRequest(paramCon);
+            int returnVal = new ShowRequestDialog(view, "Subscribe Request", postRequest).showDialog();
+
+            if (returnVal == ShowRequestDialog.APPROVE_OPTION) {
+                OperationResult opResult = adapter.doOperation(new Operation(SASAdapter.SUBSCRIBE_OP_NAME,
+                                                                             serviceURL + "?",
+                                                                             serviceURL), paramCon);
+
+                String describeSensorDoc = IOHelper.readText(opResult.getIncomingResultAsStream());
+
+                new ShowXMLDocDialog(view.getLocation(), "Subscribe Response", describeSensorDoc).setVisible(true);
+            }
+			
+		} catch (OXFException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExceptionReport e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

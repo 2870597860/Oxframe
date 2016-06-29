@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/6979/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses
+END
+SESResponseBuilder_00.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/6278/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESResponseBuilder_00.java
+END
+SESRequestBuilderFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5885/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESRequestBuilderFactory.java
+END
+ISESRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/6979/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/ISESRequestBuilder.java
+END
+SESCapabilitiesMapper_00.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/6100/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESCapabilitiesMapper_00.java
+END
+SESResponseBuilderFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/swe/!svn/ver/5972/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESResponseBuilderFactory.java
+END
+ISESResponseBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/swe/!svn/ver/5972/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/ISESResponseBuilder.java
+END
+SESRequestBuilder_00.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/6979/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESRequestBuilder_00.java
+END
+SESAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/6979/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESAdapter.java
+END
+SESUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/swe/!svn/ver/5972/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/SESUtils.java
+END
+TestSESAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/6387/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/ses/TestSESAdapter.java
+END

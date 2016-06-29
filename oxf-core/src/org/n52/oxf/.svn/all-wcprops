@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf
+END
+OXFRuntimeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/OXFRuntimeException.java
+END
+OXFThrowableCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/OXFThrowableCollection.java
+END
+ExceptionTransformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/ExceptionTransformer.java
+END
+OX_Framework.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/OX_Framework.java
+END
+OXFException.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/OXFException.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/package.html
+END

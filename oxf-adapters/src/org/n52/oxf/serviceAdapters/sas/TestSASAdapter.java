@@ -1,0 +1,139 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 15.12.2006
+ *********************************************************************************/
+
+package org.n52.oxf.serviceAdapters.sas;
+
+import org.apache.log4j.Logger;
+import org.n52.oxf.OXFException;
+import org.n52.oxf.owsCommon.ExceptionReport;
+import org.n52.oxf.owsCommon.ServiceDescriptor;
+import org.n52.oxf.owsCommon.capabilities.Operation;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.util.LoggingHandler;
+
+/**
+ * This class demonstrates how to use the SASAdapter. You might use it as an example for your own code.
+ * 
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ * 
+ */
+public class TestSASAdapter {
+
+    private static Logger log = LoggingHandler.getLogger(TestSASAdapter.class);
+
+    private final String url = "http://ruth0.uni-muenster.de:8180/sas-2.0-SNAPSHOT/sas";
+
+    public static void main(String[] args) throws OXFException, ExceptionReport {
+        TestSASAdapter testAdapter = new TestSASAdapter();
+
+        testAdapter.testGetCapabilities();
+        // testAdapter.testSubscribe();
+        // testAdapter.testCancelSubscription();
+        // testAdapter.testAdvertise();
+    }
+
+    private void testGetCapabilities() throws ExceptionReport, OXFException {
+
+        SASAdapter adapter = new SASAdapter();
+
+        ParameterContainer paramCon = new ParameterContainer();
+
+        paramCon.addParameterShell(SASRequestBuilder.GET_CAPABILITIES_SERVICE_PARAMETER, SASAdapter.SERVICE_TYPE);
+
+        SASRequestBuilder reqBuilder = new SASRequestBuilder();
+        String reqString = reqBuilder.buildCapabilitiesRequest(paramCon);
+        log.info(reqString);
+
+        OperationResult opResult = adapter.doOperation(new Operation("GetCapabilities", url + "?", url), paramCon);
+
+        log.info("RESPONSE: " + new String(opResult.getIncomingResult()));
+
+        // build up service descriptor:
+
+        ServiceDescriptor desc = adapter.initService(url);
+        log.info(desc.getContents().getDataIdentification(0).getIdentifier());
+
+    }
+
+    private void testSubscribe() throws ExceptionReport, OXFException {
+        SASAdapter adapter = new SASAdapter();
+
+        ParameterContainer paramCon = new ParameterContainer();
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_VERSION_PARAM, SASAdapter.SUPPORTED_VERSIONS[0]);
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_SERVICE_PARAM, SASAdapter.SERVICE_TYPE);
+
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_SENSOR_ID_PARAM, "7");
+
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_FILTER_DEFINITION,
+                                   "urn:x-ogc:def:phenomenon:OGC:RelativeHumidity");
+
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_FILTER_CRITERIA,
+                                   new Integer(SASRequestBuilder.Criteria.IS_BETWEEN).toString());
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_CRITERIA_LOWER_BOUNDARY, "20.0");
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_CRITERIA_UPPER_BOUNDARY, "41.0");
+
+        paramCon.addParameterShell(SASRequestBuilder.SUBSCRIBE_NOTIFICATION_CHANNEL_EMAIL, "broering@52north.org");
+
+        OperationResult opResult = adapter.doOperation(new Operation("Subscribe", url + "?", url), paramCon);
+
+        System.out.println("service response: " + new String(opResult.getIncomingResult()));
+    }
+
+    private void testCancelSubscription() throws ExceptionReport, OXFException {
+
+        SASAdapter adapter = new SASAdapter();
+
+        ParameterContainer paramCon = new ParameterContainer();
+
+        paramCon.addParameterShell(SASRequestBuilder.CANCEL_SUBSCRIPTION_SERVICE_PARAM, SASAdapter.SERVICE_TYPE);
+
+        paramCon.addParameterShell(SASRequestBuilder.CANCEL_SUBSCRIPTION_VERSION_PARAM,
+                                   SASAdapter.SUPPORTED_VERSIONS[0]);
+
+        paramCon.addParameterShell(SASRequestBuilder.CANCEL_SUBSCRIPTION_SUB_ID, "2");
+
+        OperationResult opResult = adapter.doOperation(new Operation("CancelSubscription", url + "?", url), paramCon);
+
+        log.info("service response: " + new String(opResult.getIncomingResult()));
+    }
+
+    private void testAdvertise() throws ExceptionReport, OXFException {
+        ParameterContainer paramCon = SASRequestBuilder.buildAdvertiseParamCon("SAS",
+                                                                               SASAdapter.SUPPORTED_VERSIONS[0],
+                                                                               "relativeHumidity-SensorComponent",
+                                                                               "urn:x-ogc:def:phenomenon:OGC:RelativeHumidity",
+                                                                               "%",
+                                                                               "http://52north.org/relativeHumidity-SensorML.xml");
+
+        log.info(SASRequestBuilder.buildAdvertiseRequest(paramCon));
+
+        SASAdapter adapter = new SASAdapter();
+        OperationResult opResult = adapter.doOperation(new Operation("Advertise", url + "?", url), paramCon);
+
+        System.out.println("RESPONSE: " + new String(opResult.getIncomingResult()));
+    }
+}

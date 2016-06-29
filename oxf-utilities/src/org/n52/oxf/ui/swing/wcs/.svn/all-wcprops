@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs
+END
+WCSParameterConfigurator.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs/WCSParameterConfigurator.java
+END
+WCSParameterConfiguratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs/WCSParameterConfiguratorController.java
+END
+ShowGetCoverageRequestDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs/ShowGetCoverageRequestDialog.java
+END
+ConnectWCSDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs/ConnectWCSDialog.java
+END
+ConnectWCSDialogController.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/ui/swing/wcs/ConnectWCSDialogController.java
+END

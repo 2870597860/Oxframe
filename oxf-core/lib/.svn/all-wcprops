@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/swe/!svn/ver/6258/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib
+END
+geoapi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/geoapi.jar
+END
+lib_readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/lib_readme.txt
+END
+mlibwrapper_jai.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/mlibwrapper_jai.jar
+END
+jai_core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/jai_core.jar
+END
+log4j-1.2.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/log4j-1.2.11.jar
+END
+units-0.01.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/swe/!svn/ver/6258/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/units-0.01.jar
+END
+jai_codec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/jai_codec.jar
+END
+OXFContext.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/OXFContext.jar
+END
+jts-1.7.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-core/lib/jts-1.7.2.jar
+END

@@ -1,0 +1,99 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import org.n52.oxf.OXFException;
+import org.n52.oxf.owsCommon.ExceptionReport;
+import org.n52.oxf.owsCommon.capabilities.Operation;
+import org.n52.oxf.serviceAdapters.OperationResult;
+import org.n52.oxf.serviceAdapters.ParameterContainer;
+import org.n52.oxf.serviceAdapters.sas.SASAdapter;
+import org.n52.oxf.serviceAdapters.sas.SASRequestBuilder;
+import org.n52.oxf.ui.swing.ShowRequestDialog;
+import org.n52.oxf.ui.swing.ShowXMLDocDialog;
+import org.n52.oxf.util.IOHelper;
+
+public class AlertPanelController {
+	private SASAdapter adapter;
+	private AlertPanel view;
+	private String serviceURL;
+	
+	public AlertPanelController(AlertPanel view, SASAdapter adapter, 
+			String serviceURL) {
+		super();
+		this.adapter = adapter;
+		this.view = view;
+		this.serviceURL = serviceURL;
+	}
+	
+	public void actionPerformed_PublischButton(){
+		ParameterContainer paramCon = new ParameterContainer();
+		
+		try {
+			paramCon.addParameterShell(SASRequestBuilder.ALERT_SENSORID, view.getSensorIDTextField().getText());
+			paramCon.addParameterShell(SASRequestBuilder.ALERT_TIMESTAMP, view.getTimeTextField().getText());
+		
+			paramCon.addParameterShell(SASRequestBuilder.ALERT_DATA,view.getDataTextField().getText());
+			
+			String postRequest = SASRequestBuilder.buildAlertRequest(paramCon);
+			int returnVal = new ShowRequestDialog(view, "Advertise Request", postRequest).showDialog();
+
+            if (returnVal == ShowRequestDialog.APPROVE_OPTION) {
+                OperationResult opResult = adapter.doOperation(new Operation(SASAdapter.ALERT_OP_NAME,
+                                                                             serviceURL + "?",
+                                                                             serviceURL), paramCon);
+
+                String describeSensorDoc = IOHelper.readText(opResult.getIncomingResultAsStream());
+
+                new ShowXMLDocDialog(view.getLocation(), "Advertise Response", describeSensorDoc).setVisible(true);
+            }
+			
+		} catch (OXFException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExceptionReport e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void actionPerformed_NowButton(){
+		Date d = new Date();
+		SimpleDateFormat df = new SimpleDateFormat( "yyyy-MM-dd'T'HH:mm:ss'Z'" );
+		view.getTimeTextField().setText(df.format(d));
+	}
+}

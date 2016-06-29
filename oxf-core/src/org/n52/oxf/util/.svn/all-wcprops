@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/swe/!svn/ver/9946/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util
+END
+IEventListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/IEventListener.java
+END
+JavaHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/JavaHelper.java
+END
+EventName.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/swe/!svn/ver/6071/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/EventName.java
+END
+LoggingOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/LoggingOutputStream.java
+END
+IEventEmitter.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/IEventEmitter.java
+END
+LoggingHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/LoggingHandler.java
+END
+FileFilterImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/FileFilterImpl.java
+END
+IOHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/9946/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/IOHelper.java
+END
+OMParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/6948/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/OMParser.java
+END
+OXFEventSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/OXFEventSupport.java
+END
+OXFEventException.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/OXFEventException.java
+END
+OXFEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/OXFEvent.java
+END
+ParameterMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/util/ParameterMap.java
+END

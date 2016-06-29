@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature
+END
+IFeatureStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/IFeatureStore.java
+END
+OXFFeatureCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/OXFFeatureCollection.java
+END
+OXFFeature.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/OXFFeature.java
+END
+OXFFeatureType.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/OXFFeatureType.java
+END
+OXFFeatureAttributeDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/OXFFeatureAttributeDescriptor.java
+END
+OXFGeometryAttribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/OXFGeometryAttribute.java
+END
+HowToFeatureModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-core/src/org/n52/oxf/feature/HowToFeatureModel.java
+END

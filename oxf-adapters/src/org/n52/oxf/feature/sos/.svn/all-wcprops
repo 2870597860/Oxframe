@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/sos
+END
+SOSFoiStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/swe/!svn/ver/7562/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/sos/SOSFoiStore.java
+END
+OXFSensorType.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/swe/!svn/ver/8371/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/sos/OXFSensorType.java
+END
+SOSSensorStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/sos/SOSSensorStore.java
+END
+SOSObservationStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/10521/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/sos/SOSObservationStore.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sas
+END
+SASCapabilitiesMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sas/SASCapabilitiesMapper.java
+END
+SASRequestBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sas/SASRequestBuilder.java
+END
+SASAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sas/SASAdapter.java
+END
+TestSASAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/serviceAdapters/sas/TestSASAdapter.java
+END

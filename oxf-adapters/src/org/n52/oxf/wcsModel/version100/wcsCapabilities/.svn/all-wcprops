@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities
+END
+CoverageDescription.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/CoverageDescription.java
+END
+WCSCapabilityType.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/WCSCapabilityType.java
+END
+ValueEnumType.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ValueEnumType.java
+END
+AbstractDescriptionBaseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/AbstractDescriptionBaseType.java
+END
+TypedLiteralType.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/TypedLiteralType.java
+END
+Keywords.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/Keywords.java
+END
+RangeSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/RangeSet.java
+END
+AbstractDescriptionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/AbstractDescriptionType.java
+END
+AxisDescriptionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/AxisDescriptionType.java
+END
+ContentMetadata.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ContentMetadata.java
+END
+MetadataAssociationType.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/MetadataAssociationType.java
+END
+SupportedFormatsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/SupportedFormatsType.java
+END
+DomainSetType.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/DomainSetType.java
+END
+TelephoneType.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/TelephoneType.java
+END
+IntervalType.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/IntervalType.java
+END
+AddressType.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/AddressType.java
+END
+GetCapabilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/GetCapabilities.java
+END
+TimeSequenceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/TimeSequenceType.java
+END
+InterpolationMethodType.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/InterpolationMethodType.java
+END
+DescribeCoverage.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/DescribeCoverage.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ObjectFactory.java
+END
+MetadataLinkType.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/MetadataLinkType.java
+END
+ServiceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ServiceType.java
+END
+TimePeriodType.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/TimePeriodType.java
+END
+ResponsiblePartyType.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ResponsiblePartyType.java
+END
+AxisDescription.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/AxisDescription.java
+END
+WCSCapabilitiesType.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/WCSCapabilitiesType.java
+END
+RangeSetType.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/RangeSetType.java
+END
+DCPTypeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/DCPTypeType.java
+END
+CoverageOfferingType.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/CoverageOfferingType.java
+END
+CapabilitiesSectionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/CapabilitiesSectionType.java
+END
+SupportedCRSsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/SupportedCRSsType.java
+END
+SupportedInterpolationsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/SupportedInterpolationsType.java
+END
+LonLatEnvelopeBaseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/LonLatEnvelopeBaseType.java
+END
+Interval.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/Interval.java
+END
+CoverageOfferingBriefType.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/CoverageOfferingBriefType.java
+END
+SpatialDomainType.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/SpatialDomainType.java
+END
+LonLatEnvelopeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/LonLatEnvelopeType.java
+END
+ValueRangeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ValueRangeType.java
+END
+ContactType.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ContactType.java
+END
+OnlineResourceType.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/OnlineResourceType.java
+END
+ValueEnumBaseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/5218/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/wcsModel/version100/wcsCapabilities/ValueEnumBaseType.java
+END

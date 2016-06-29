@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/swe/!svn/ver/7787/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src
+END
+serviceURLs.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/swe/!svn/ver/6955/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/serviceURLs.properties
+END
+capabilities.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/capabilities.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/swe/!svn/ver/2367/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/log4j.properties
+END

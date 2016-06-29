@@ -1,0 +1,21 @@
+
+<project name="OXF - build OXF.jar and zip" default="mkJar" basedir=".">
+	<description>builds the 52°north OX-Framework JAR</description>
+
+	<property file="build.properties" />
+	
+	<target name="init">
+		 <delete>
+		    <fileset dir="${dist}" includes="OXF.jar"/>
+		  </delete>
+	</target>
+	
+	<target name="mkJar" depends="init" description="generate the distribution">
+		<mkdir dir="${dist}" />
+		
+		<jar destfile="${dist}/OXF.jar">
+			<fileset dir="${classes}" />
+		</jar>
+	</target>
+	
+</project>

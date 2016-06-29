@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="oxf-core/src"/>
+	<classpathentry kind="src" path="oxf-adapters/src"/>
+	<classpathentry kind="src" path="oxf-utilities/src"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSas-2.0.0-SOSADVERTISE.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcWns-0.0.0.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSensorMLXBs_101.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/WVStation.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/activation.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/commons-httpclient-3.0-rc3.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/isorelax.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/istackp.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/xbean.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Programme/Java/xmlbeans-2.2.0/docs/reference/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="oxf-adapters/lib/xsdlib.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/geoapi.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/jai_codec.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/jai_core.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/jts-1.7.2.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/log4j-1.2.11.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/mlibwrapper_jai.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/units-0.01.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/jcommon-1.0.0.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/jfreechart-1.0.0.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/wmsConfig.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcOMXBs_000.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSamplingXBs_000.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSosXBs_000.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcOMXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcOwsXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSamplingXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSosXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSensorMLXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcOwsXBs_000.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSweCommonXBs_100.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcWcsXBs_111.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcCSW_202_XBs.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/sps-client.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/kml21.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/wmsClientCore.jar"/>
+	<classpathentry kind="lib" path="oxf-core/lib/OXFContext.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ogcSpsXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/spsSweCommon.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/spsSweXBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/soap-envelope-beans.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ses-beans.jar"/>
+	<classpathentry kind="lib" path="oxf-utilities/lib/gpx10XBs.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ses_wsBaseNotification.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/ses_wsBrokeredNotification.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/52n-sos-xml-gml-32-3.2.1.jar"/>
+	<classpathentry kind="lib" path="oxf-adapters/lib/52n-sos-xml-wml2-2.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="SERVLET_API"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

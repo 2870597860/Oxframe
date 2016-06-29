@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/swe/!svn/ver/7455/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional
+END
+FeedProperties.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/7455/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/FeedProperties.java
+END
+TransactionalFeederRealTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/TransactionalFeederRealTime.java
+END
+RegisterMobileSensor.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/swe/!svn/ver/7455/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/RegisterMobileSensor.java
+END
+HamburgLissabonFeederProperties.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/HamburgLissabonFeederProperties.java
+END
+UpdateMobile.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/UpdateMobile.java
+END
+FeedMobile.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/FeedMobile.java
+END
+Pair.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/Pair.java
+END
+TransactionalFeeder.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/swe/!svn/ver/7455/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/TransactionalFeeder.java
+END
+FeedMobileRealTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/swe/!svn/ver/6083/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/FeedMobileRealTime.java
+END
+RegisterSensor.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/7455/main/Clients/OXFramework/trunk/OXFramework/oxf-utilities/src/org/n52/oxf/feeder/transactional/RegisterSensor.java
+END

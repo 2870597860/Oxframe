@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/dataTypes
+END
+OXFMeasureType.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/dataTypes/OXFMeasureType.java
+END
+IObservationResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/dataTypes/IObservationResult.java
+END
+OXFPhenomenonPropertyType.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/dataTypes/OXFPhenomenonPropertyType.java
+END
+OXFScopedName.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/swe/!svn/ver/5708/main/Clients/OXFramework/trunk/OXFramework/oxf-adapters/src/org/n52/oxf/feature/dataTypes/OXFScopedName.java
+END

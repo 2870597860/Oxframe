@@ -1,0 +1,218 @@
+/**********************************************************************************
+ Copyright (C) 2009
+ by 52 North Initiative for Geospatial Open Source Software GmbH
+
+ Contact: Andreas Wytzisk 
+ 52 North Initiative for Geospatial Open Source Software GmbH
+ Martin-Luther-King-Weg 24
+ 48155 Muenster, Germany
+ info@52north.org
+
+ This program is free software; you can redistribute and/or modify it under the
+ terms of the GNU General Public License version 2 as published by the Free
+ Software Foundation.
+
+ This program is distributed WITHOUT ANY WARRANTY; even without the implied
+ WARRANTY OF MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along with this 
+ program (see gnu-gplv2.txt). If not, write to the Free Software Foundation, Inc., 
+ 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA or visit the Free Software
+ Foundation web page, http://www.fsf.org.
+ 
+ Created on: 24.01.2008
+ *********************************************************************************/
+
+package org.n52.oxf.ui.swing.sas;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+
+import org.n52.oxf.serviceAdapters.sas.SASAdapter;
+
+/**
+ * @author <a href="mailto:broering@52north.org">Arne Broering</a>
+ *
+ */
+public class AdvertisePanel extends JPanel {
+
+    private static final long serialVersionUID = 1L;
+    private JLabel phenomenonLabel = null;
+    private JLabel compNameLabel = null;
+    private JTextField compNameTextField = null;
+    private JTextField phenTextField = null;
+    private JTextField uomTextField = null;
+    private JLabel uomLabel = null;
+    private JTextField smlTextField = null;
+    private JLabel smlLabel = null;
+    private JButton okButton = null;
+    
+    private AdvertisePanelController controller;
+    
+    /**
+     * This is the default constructor
+     */
+    public AdvertisePanel(SASAdapter adapter, String serviceURL) {
+        super();
+        
+        initialize();
+        
+        controller = new AdvertisePanelController(this, adapter, serviceURL);
+    }
+
+    /**
+     * This method initializes this
+     * 
+     * @return void
+     */
+    private void initialize() {
+    	
+    	
+    	
+    	
+        GridBagConstraints gridBagConstraints8 = new GridBagConstraints();
+        gridBagConstraints8.gridx = 0;
+        gridBagConstraints8.insets = new Insets(0, 0, 0, 0);
+        gridBagConstraints8.gridy = 4;
+    	compNameLabel = new JLabel();
+    	compNameLabel.setText("Components Name:");
+    	GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints7.gridy = 4;
+        gridBagConstraints7.weightx = 1.0;
+        gridBagConstraints7.gridx = 1;
+    	
+        GridBagConstraints gridBagConstraints6 = new GridBagConstraints();
+        gridBagConstraints6.gridx = 0;
+        gridBagConstraints6.gridwidth = 2;
+        gridBagConstraints6.fill = GridBagConstraints.NONE;
+        gridBagConstraints6.weightx = 100.0D;
+        gridBagConstraints6.gridheight = 1;
+        gridBagConstraints6.gridy = 5;
+        GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
+        gridBagConstraints5.gridx = 0;
+        gridBagConstraints5.insets = new Insets(0, 0, 0, 0);
+        gridBagConstraints5.gridy = 3;
+        smlLabel = new JLabel();
+        smlLabel.setText("SensorML Reference:");
+        GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
+        gridBagConstraints4.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints4.gridy = 3;
+        gridBagConstraints4.weightx = 1.0;
+        gridBagConstraints4.gridx = 1;
+        GridBagConstraints gridBagConstraints3 = new GridBagConstraints();
+        gridBagConstraints3.gridx = 0;
+        gridBagConstraints3.gridy = 1;
+        uomLabel = new JLabel();
+        uomLabel.setText("Unit of Measure:");
+        GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
+        gridBagConstraints2.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints2.gridy = 1;
+        gridBagConstraints2.weightx = 1.0;
+        gridBagConstraints2.gridx = 1;
+        GridBagConstraints gridBagConstraints1 = new GridBagConstraints();
+        gridBagConstraints1.fill = GridBagConstraints.HORIZONTAL;
+        gridBagConstraints1.gridy = 0;
+        gridBagConstraints1.weightx = 1.0;
+        gridBagConstraints1.gridx = 1;
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        phenomenonLabel = new JLabel();
+        phenomenonLabel.setText("Phenomenon:");
+        this.setSize(386, 240);
+        this.setLayout(new GridBagLayout());
+        this.setBorder(BorderFactory.createTitledBorder(null, "Advertise", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Dialog", Font.BOLD, 12), new Color(51, 51, 51)));
+        this.add(compNameLabel,gridBagConstraints8);
+        this.add(getCompNameTextField(),gridBagConstraints7);
+        this.add(phenomenonLabel, gridBagConstraints);
+        this.add(getPhenTextField(), gridBagConstraints1);
+        this.add(getUomTextField(), gridBagConstraints2);
+        this.add(uomLabel, gridBagConstraints3);
+        this.add(getSmlTextField(), gridBagConstraints4);
+        this.add(smlLabel, gridBagConstraints5);
+        this.add(getOkButton(), gridBagConstraints6);
+    }
+    
+    /**
+     * This method initializes compNameTextField	
+     * 	
+     * @return javax.swing.JTextField	
+     */
+    public JTextField getCompNameTextField() {
+        if (compNameTextField == null) {
+        	compNameTextField = new JTextField();
+        	compNameTextField.setText("sensor data structure");
+        }
+        return compNameTextField;
+    }
+    
+    /**
+     * This method initializes phenTextField	
+     * 	
+     * @return javax.swing.JTextField	
+     */
+    public JTextField getPhenTextField() {
+        if (phenTextField == null) {
+            phenTextField = new JTextField();
+            phenTextField.setText("urn:x-ogc:def:phenomenon:OGC:Temperature");
+        }
+        return phenTextField;
+    }
+
+    /**
+     * This method initializes uomTextField	
+     * 	
+     * @return javax.swing.JTextField	
+     */
+    public JTextField getUomTextField() {
+        if (uomTextField == null) {
+            uomTextField = new JTextField();
+            uomTextField.setText("Cel");
+        }
+        return uomTextField;
+    }
+
+    /**
+     * This method initializes smlTextField	
+     * 	
+     * @return javax.swing.JTextField	
+     */
+    public JTextField getSmlTextField() {
+        if (smlTextField == null) {
+            smlTextField = new JTextField();
+            smlTextField.setText("http://www.52north.org/swe/Temp1.xml");
+        }
+        return smlTextField;
+    }
+
+    /**
+     * This method initializes okButton	
+     * 	
+     * @return javax.swing.JButton	
+     */
+    private JButton getOkButton() {
+        if (okButton == null) {
+            okButton = new JButton();
+            okButton.setText("ok");
+            okButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent e) {
+                    controller.actionPerformed_okButton();
+                }
+            });
+        }
+        return okButton;
+    }
+
+}  //  @jve:decl-index=0:visual-constraint="10,10"
